@@ -121,12 +121,6 @@
   <data name="Aragorn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resource\Aragorn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Battle_Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resource\Battle_Background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Battle_Background_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resource\Battle_Background_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Empty" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resource\Empty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,6 +136,12 @@
   <data name="Menu_Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resource\Menu_Background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Orc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Orc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Orc_Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Battle_Background_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Ring" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resource\Ring.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,7 +154,19 @@
   <data name="Saruman" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resource\Saruman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Saruman_Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Saruman_Background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Sauron" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resource\Sauron.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sauron_Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Battle_Background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Troll" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Troll.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Troll_Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Troll_Background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

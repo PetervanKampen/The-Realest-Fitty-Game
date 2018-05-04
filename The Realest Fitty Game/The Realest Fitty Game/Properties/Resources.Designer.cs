@@ -73,26 +73,6 @@ namespace The_Realest_Fitty_Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Battle_Background {
-            get {
-                object obj = ResourceManager.GetObject("Battle_Background", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Battle_Background_2 {
-            get {
-                object obj = ResourceManager.GetObject("Battle_Background_2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Empty {
             get {
                 object obj = ResourceManager.GetObject("Empty", resourceCulture);
@@ -143,6 +123,26 @@ namespace The_Realest_Fitty_Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Orc {
+            get {
+                object obj = ResourceManager.GetObject("Orc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Orc_Background {
+            get {
+                object obj = ResourceManager.GetObject("Orc_Background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ring {
             get {
                 object obj = ResourceManager.GetObject("Ring", resourceCulture);
@@ -183,9 +183,49 @@ namespace The_Realest_Fitty_Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Saruman_Background {
+            get {
+                object obj = ResourceManager.GetObject("Saruman_Background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Sauron {
             get {
                 object obj = ResourceManager.GetObject("Sauron", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sauron_Background {
+            get {
+                object obj = ResourceManager.GetObject("Sauron_Background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Troll {
+            get {
+                object obj = ResourceManager.GetObject("Troll", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Troll_Background {
+            get {
+                object obj = ResourceManager.GetObject("Troll_Background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

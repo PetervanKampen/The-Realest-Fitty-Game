@@ -12,7 +12,7 @@ namespace The_Realest_Fitty_Game
         public Sauron()
         {
             Name = "Sauron";
-            Charnum = 2;
+            Charnum = 4;
             enemy = true;
             hp = 200;
             sprite = global::The_Realest_Fitty_Game.Properties.Resources.Sauron;

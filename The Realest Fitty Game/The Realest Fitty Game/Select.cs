@@ -60,7 +60,7 @@ namespace The_Realest_Fitty_Game
             this.Description.Text = data.playerchar.getDescription();
         }
 
-        private void Saruman_Button_Click(object sender, EventArgs e)
+        private void Legolas_Button_Click(object sender, EventArgs e)
         {
             this.Gimli_Button.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Empty;
             this.Aragorn_Button.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Empty;
@@ -71,7 +71,7 @@ namespace The_Realest_Fitty_Game
             this.Description.Text = data.playerchar.getDescription();
         }
 
-        private void Sauron_Button_Click(object sender, EventArgs e)
+        private void Gimli_Button_Click(object sender, EventArgs e)
         {
             this.Legolas_Button.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Empty;
             this.Aragorn_Button.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Empty;

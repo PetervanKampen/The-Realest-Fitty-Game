@@ -123,7 +123,7 @@
             this.Legolas_Button.TabIndex = 8;
             this.Legolas_Button.Text = "Legolas";
             this.Legolas_Button.UseVisualStyleBackColor = false;
-            this.Legolas_Button.Click += new System.EventHandler(this.Saruman_Button_Click);
+            this.Legolas_Button.Click += new System.EventHandler(this.Legolas_Button_Click);
             // 
             // Gimli_Button
             // 
@@ -141,7 +141,7 @@
             this.Gimli_Button.TabIndex = 9;
             this.Gimli_Button.Text = "Gimli";
             this.Gimli_Button.UseVisualStyleBackColor = false;
-            this.Gimli_Button.Click += new System.EventHandler(this.Sauron_Button_Click);
+            this.Gimli_Button.Click += new System.EventHandler(this.Gimli_Button_Click);
             // 
             // Description
             // 

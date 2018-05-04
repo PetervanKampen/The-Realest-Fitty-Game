@@ -11,23 +11,12 @@ using System.Windows.Forms;
 namespace The_Realest_Fitty_Game
 {
     public partial class Battlescreen : Form
-    {
-        private int cycle;
+    {       
         private Info data;
 
         public Battlescreen(Info data_)
         {
             data = data_;
-            cycle = 0;
-            InitializeComponent();
-            Setup();
-
-        }
-
-        public Battlescreen(Info data_, int cycle_)
-        {
-            data = data_;
-            cycle = cycle_;
             InitializeComponent();
             Setup();
         }
@@ -35,15 +24,29 @@ namespace The_Realest_Fitty_Game
         private void Setup()
         {
             this.Char1.Image = data.playerchar.sprite;
-            switch (cycle)
+            switch (data.getCycle())
             {
                 case 0:
-
-                    this.Char2.Image = global::The_Realest_Fitty_Game.Properties.Resources.Saruman; break;
+                    data.enemychar = new Orc();
+                    BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Orc_Background;
+                    break;
 
                 case 1:
-                    this.Char2.Image = global::The_Realest_Fitty_Game.Properties.Resources.Sauron; break;
+                    data.enemychar = new Troll();
+                    BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Troll_Background;
+                    break;
+
+                case 2:
+                    data.enemychar = new Saruman();
+                    BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Saruman_Background;
+                    break;
+
+                case 3:
+                    data.enemychar = new Sauron(); 
+                    BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Sauron_Background;
+                    break;
             }
+            this.Char2.Image = data.enemychar.sprite;
         }
 
         private void Battlescreen_Load(object sender, EventArgs e)
@@ -62,6 +65,12 @@ namespace The_Realest_Fitty_Game
             {
                 this.Char1HP.Value -= 10;
                 this.Char2HP.Value -= 10;
+            }
+            if (this.Char2HP.Value == 0)
+            {
+                data.addCycle();
+                new Battlescreen(data).Show();
+                this.Visible = false;
             }
         }
     }

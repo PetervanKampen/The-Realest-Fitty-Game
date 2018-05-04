@@ -102,7 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Battle_Background_2;
+            this.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Orc_Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1284, 731);
             this.Controls.Add(this.Char2HP);
