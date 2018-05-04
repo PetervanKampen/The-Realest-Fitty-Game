@@ -14,9 +14,10 @@ namespace The_Realest_Fitty_Game
         [STAThread]
         static void Main()
         {
+            Info data = new Info();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu());
+            Application.Run(new Menu(data));
         }
     }
 }

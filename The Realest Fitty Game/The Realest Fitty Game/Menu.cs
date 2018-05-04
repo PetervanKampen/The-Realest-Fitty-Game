@@ -12,8 +12,11 @@ namespace The_Realest_Fitty_Game
 {
     public partial class Menu : Form
     {
-        public Menu()
+        private Info data;
+
+        public Menu(Info data_)
         {
+            data = data_;
             InitializeComponent();
         }
 
@@ -24,13 +27,14 @@ namespace The_Realest_Fitty_Game
 
         private void PlayButton_Click(object sender, EventArgs e)
         {
-            new Select().Show();
+            new Select(data).Show();
             this.Visible = false;
         }
 
         private void Settings_Click(object sender, EventArgs e)
         {
-
+            new Settings(data).Show();
+            this.Visible = false;
         }
 
         private void Exit_Click(object sender, EventArgs e)

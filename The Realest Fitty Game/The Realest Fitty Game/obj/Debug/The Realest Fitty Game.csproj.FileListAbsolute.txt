@@ -9,3 +9,15 @@ C:\Users\peter\Documents\School\GitHub\The Realest Fitty Game\The Realest Fitty 
 C:\Users\peter\Documents\School\GitHub\The Realest Fitty Game\The Realest Fitty Game\obj\Debug\The_Realest_Fitty_Game.Battlescreen.resources
 C:\Users\peter\Documents\School\GitHub\The Realest Fitty Game\The Realest Fitty Game\obj\Debug\The_Realest_Fitty_Game.Menu.resources
 C:\Users\peter\Documents\School\GitHub\The Realest Fitty Game\The Realest Fitty Game\obj\Debug\The_Realest_Fitty_Game.Select.resources
+C:\Users\Peter\Documents\School\Github\The-Realest-Fitty-Game\The Realest Fitty Game\The Realest Fitty Game\bin\Debug\The Realest Fitty Game.exe.config
+C:\Users\Peter\Documents\School\Github\The-Realest-Fitty-Game\The Realest Fitty Game\The Realest Fitty Game\bin\Debug\The Realest Fitty Game.exe
+C:\Users\Peter\Documents\School\Github\The-Realest-Fitty-Game\The Realest Fitty Game\The Realest Fitty Game\bin\Debug\The Realest Fitty Game.pdb
+C:\Users\Peter\Documents\School\Github\The-Realest-Fitty-Game\The Realest Fitty Game\The Realest Fitty Game\obj\Debug\The Realest Fitty Game.csprojResolveAssemblyReference.cache
+C:\Users\Peter\Documents\School\Github\The-Realest-Fitty-Game\The Realest Fitty Game\The Realest Fitty Game\obj\Debug\The_Realest_Fitty_Game.Battlescreen.resources
+C:\Users\Peter\Documents\School\Github\The-Realest-Fitty-Game\The Realest Fitty Game\The Realest Fitty Game\obj\Debug\The_Realest_Fitty_Game.Menu.resources
+C:\Users\Peter\Documents\School\Github\The-Realest-Fitty-Game\The Realest Fitty Game\The Realest Fitty Game\obj\Debug\The_Realest_Fitty_Game.Select.resources
+C:\Users\Peter\Documents\School\Github\The-Realest-Fitty-Game\The Realest Fitty Game\The Realest Fitty Game\obj\Debug\The_Realest_Fitty_Game.Properties.Resources.resources
+C:\Users\Peter\Documents\School\Github\The-Realest-Fitty-Game\The Realest Fitty Game\The Realest Fitty Game\obj\Debug\The Realest Fitty Game.csproj.GenerateResource.Cache
+C:\Users\Peter\Documents\School\Github\The-Realest-Fitty-Game\The Realest Fitty Game\The Realest Fitty Game\obj\Debug\The Realest Fitty Game.exe
+C:\Users\Peter\Documents\School\Github\The-Realest-Fitty-Game\The Realest Fitty Game\The Realest Fitty Game\obj\Debug\The Realest Fitty Game.pdb
+C:\Users\Peter\Documents\School\Github\The-Realest-Fitty-Game\The Realest Fitty Game\The Realest Fitty Game\obj\Debug\The_Realest_Fitty_Game.Settings.resources

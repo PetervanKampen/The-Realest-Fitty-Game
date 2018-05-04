@@ -13,10 +13,12 @@ namespace The_Realest_Fitty_Game
     public partial class Battlescreen : Form
     {
         private int p1;
+        private Info data;
 
-        public Battlescreen(int p1_)
+        public Battlescreen(int p1_, Info data_)
         {
-            p1 = p1_;     
+            p1 = p1_;
+            data = data_;   
             InitializeComponent();
             Setup();
         }

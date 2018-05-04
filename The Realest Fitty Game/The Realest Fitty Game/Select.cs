@@ -13,9 +13,11 @@ namespace The_Realest_Fitty_Game
     public partial class Select : Form
     {
         private int p1 = 0;
+        private Info data;
 
-        public Select()
+        public Select(Info data_)
         {
+            data = data_;
             InitializeComponent();
         }
 
@@ -83,7 +85,7 @@ namespace The_Realest_Fitty_Game
 
         private void Return_Click(object sender, EventArgs e)
         {
-            new Menu().Show();
+            new Menu(data).Show();
             this.Visible = false;
         }
 
