@@ -46,13 +46,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aragorn.cs" />
     <Compile Include="Battlescreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Battlescreen.Designer.cs">
       <DependentUpon>Battlescreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Character.cs" />
+    <Compile Include="Gandalf.cs" />
+    <Compile Include="Gimli.cs" />
     <Compile Include="Info.cs" />
+    <Compile Include="Legolas.cs" />
+    <Compile Include="Saruman.cs" />
+    <Compile Include="Sauron.cs" />
     <Compile Include="Settings.cs">
       <SubType>Form</SubType>
     </Compile>

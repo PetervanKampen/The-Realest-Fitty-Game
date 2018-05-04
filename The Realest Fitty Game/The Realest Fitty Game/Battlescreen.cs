@@ -12,34 +12,37 @@ namespace The_Realest_Fitty_Game
 {
     public partial class Battlescreen : Form
     {
-        private int p1;
+        private int cycle;
         private Info data;
 
-        public Battlescreen(int p1_, Info data_)
+        public Battlescreen(Info data_)
         {
-            p1 = p1_;
-            data = data_;   
+            data = data_;
+            cycle = 0;
+            InitializeComponent();
+            Setup();
+
+        }
+
+        public Battlescreen(Info data_, int cycle_)
+        {
+            data = data_;
+            cycle = cycle_;
             InitializeComponent();
             Setup();
         }
 
         private void Setup()
         {
-            if (p1 == 1)
+            this.Char1.Image = data.playerchar.sprite;
+            switch (cycle)
             {
-                this.Char1.Image = global::The_Realest_Fitty_Game.Properties.Resources.Gandalf;
-            }
-            else if (p1 == 2)
-            {
-                this.Char1.Image = global::The_Realest_Fitty_Game.Properties.Resources.Aragorn;
-            }
-            else if (p1 == 3)
-            {
-                this.Char1.Image = global::The_Realest_Fitty_Game.Properties.Resources.Legolas;
-            }
-            else if (p1 == 4)
-            {
-                this.Char1.Image = global::The_Realest_Fitty_Game.Properties.Resources.Gimli;
+                case 0:
+
+                    this.Char2.Image = global::The_Realest_Fitty_Game.Properties.Resources.Saruman; break;
+
+                case 1:
+                    this.Char2.Image = global::The_Realest_Fitty_Game.Properties.Resources.Sauron; break;
             }
         }
 
@@ -51,6 +54,15 @@ namespace The_Realest_Fitty_Game
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             System.Windows.Forms.Application.Exit();
+        }
+
+        private void Debug_Click(object sender, EventArgs e)
+        {
+            if (this.Char1HP.Value > 0 && this.Char2HP.Value > 0)
+            {
+                this.Char1HP.Value -= 10;
+                this.Char2HP.Value -= 10;
+            }
         }
     }
 }

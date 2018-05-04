@@ -30,6 +30,7 @@
         {
             this.Settings_Title = new System.Windows.Forms.Label();
             this.SoundBox = new System.Windows.Forms.CheckBox();
+            this.Return = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Settings_Title
@@ -66,6 +67,23 @@
             this.SoundBox.UseVisualStyleBackColor = false;
             this.SoundBox.CheckedChanged += new System.EventHandler(this.SoundBox_CheckedChanged);
             // 
+            // Return
+            // 
+            this.Return.BackColor = System.Drawing.Color.Transparent;
+            this.Return.FlatAppearance.BorderSize = 0;
+            this.Return.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.Return.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.Return.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Return.Font = new System.Drawing.Font("Gigi", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Return.ForeColor = System.Drawing.Color.Gold;
+            this.Return.Location = new System.Drawing.Point(12, 12);
+            this.Return.Name = "Return";
+            this.Return.Size = new System.Drawing.Size(153, 80);
+            this.Return.TabIndex = 12;
+            this.Return.Text = "<-";
+            this.Return.UseVisualStyleBackColor = false;
+            this.Return.Click += new System.EventHandler(this.Return_Click);
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -73,6 +91,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1284, 731);
+            this.Controls.Add(this.Return);
             this.Controls.Add(this.SoundBox);
             this.Controls.Add(this.Settings_Title);
             this.DoubleBuffered = true;
@@ -88,5 +107,6 @@
 
         private System.Windows.Forms.Label Settings_Title;
         private System.Windows.Forms.CheckBox SoundBox;
+        private System.Windows.Forms.Button Return;
     }
 }

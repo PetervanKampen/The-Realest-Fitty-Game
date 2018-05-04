@@ -15,7 +15,7 @@ namespace The_Realest_Fitty_Game
         static void Main()
         {
             Info data = new Info();
-            Application.EnableVisualStyles();
+           // Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Menu(data));
         }

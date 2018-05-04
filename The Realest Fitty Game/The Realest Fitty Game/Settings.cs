@@ -24,19 +24,25 @@ namespace The_Realest_Fitty_Game
         {
             if(SoundBox.Checked)
             {
-                SoundBox.Text = "Sound: <- ON ->";
-                data.setSound(SoundBox.Checked);
+                SoundBox.Text = "Sound: <- ON ->";              
             } 
             else if(!SoundBox.Checked)
             {
-                SoundBox.Text = "Sound: <- OFF ->";
-                data.setSound(SoundBox.Checked);
+                SoundBox.Text = "Sound: <- OFF ->";              
             }
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             System.Windows.Forms.Application.Exit();
+        }
+
+        private void Return_Click(object sender, EventArgs e)
+        {
+            data.setSound(SoundBox.Checked);
+
+            new Menu(data).Show();
+            this.Visible = false;
         }
     }
 }

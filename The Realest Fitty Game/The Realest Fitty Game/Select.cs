@@ -12,7 +12,6 @@ namespace The_Realest_Fitty_Game
 {
     public partial class Select : Form
     {
-        private int p1 = 0;
         private Info data;
 
         public Select(Info data_)
@@ -23,9 +22,9 @@ namespace The_Realest_Fitty_Game
 
         private void PlayButton_Click(object sender, EventArgs e)
         {
-            if (p1 != 0)
+            if (data.playerchar != null)
             {
-                new Battlescreen(p1).Show();
+                new Battlescreen(data).Show();
                 this.Visible = false;
             }
             else
@@ -45,9 +44,9 @@ namespace The_Realest_Fitty_Game
             this.Gimli_Button.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Empty;
             this.Legolas_Button.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Empty;
             this.Gandalf_Button.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Ring_Text;
-            p1 = 1;
+            data.playerchar = new Gandalf();
             this.Title.ForeColor = Color.Gold;
-            this.Description.Text = "A kind wizard sent to help in the fight against evil.";
+            this.Description.Text = data.playerchar.getDescription();
         }
 
         private void Aragorn_Button_Click(object sender, EventArgs e)
@@ -56,9 +55,9 @@ namespace The_Realest_Fitty_Game
             this.Gimli_Button.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Empty;
             this.Legolas_Button.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Empty;
             this.Aragorn_Button.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Ring_Text;
-            p1 = 2;
+            data.playerchar = new Aragorn();
             this.Title.ForeColor = Color.Gold;
-            this.Description.Text = "The exiled King of Gondor, an agile swordsman wielding a two handed blade.";
+            this.Description.Text = data.playerchar.getDescription();
         }
 
         private void Saruman_Button_Click(object sender, EventArgs e)
@@ -67,9 +66,9 @@ namespace The_Realest_Fitty_Game
             this.Aragorn_Button.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Empty;
             this.Gandalf_Button.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Empty;
             this.Legolas_Button.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Ring_Text;
-            p1 = 3;
+            data.playerchar = new Legolas();
             this.Title.ForeColor = Color.Gold;
-            this.Description.Text = "The prince of the elven kingdom of Mirkwood, wielding a bow with deadeye accuracy.";
+            this.Description.Text = data.playerchar.getDescription();
         }
 
         private void Sauron_Button_Click(object sender, EventArgs e)
@@ -78,9 +77,9 @@ namespace The_Realest_Fitty_Game
             this.Aragorn_Button.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Empty;
             this.Gandalf_Button.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Empty;
             this.Gimli_Button.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Ring_Text;
-            p1 = 4;
+            data.playerchar = new Gimli();
             this.Title.ForeColor = Color.Gold;
-            this.Description.Text = "A stubborn dwarf hailing from Erebor. Not very agile but definitely hits hardest.";
+            this.Description.Text = data.playerchar.getDescription();
         }
 
         private void Return_Click(object sender, EventArgs e)
