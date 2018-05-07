@@ -39,28 +39,31 @@
             // 
             // Char1
             // 
+            this.Char1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Char1.BackColor = System.Drawing.Color.Transparent;
-            this.Char1.Image = global::The_Realest_Fitty_Game.Properties.Resources.Gandalf;           
-            this.Char1.Location = new System.Drawing.Point(98, 241);
+            this.Char1.Image = global::The_Realest_Fitty_Game.Properties.Resources.Gandalf;
+            this.Char1.Location = new System.Drawing.Point(69, 260);
             this.Char1.Name = "Char1";
-            this.Char1.Size = new System.Drawing.Size(276, 434);
+            this.Char1.Size = new System.Drawing.Size(250, 390);
             this.Char1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Char1.TabIndex = 0;
             this.Char1.TabStop = false;
             // 
             // Char2
             // 
+            this.Char2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Char2.BackColor = System.Drawing.Color.Transparent;
             this.Char2.Image = global::The_Realest_Fitty_Game.Properties.Resources.Saruman;
-            this.Char2.Location = new System.Drawing.Point(888, 241);
+            this.Char2.Location = new System.Drawing.Point(976, 260);
             this.Char2.Name = "Char2";
-            this.Char2.Size = new System.Drawing.Size(315, 434);
+            this.Char2.Size = new System.Drawing.Size(250, 390);
             this.Char2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Char2.TabIndex = 1;
             this.Char2.TabStop = false;
             // 
             // Char1HP
             // 
+            this.Char1HP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Char1HP.BackColor = System.Drawing.Color.White;
             this.Char1HP.Cursor = System.Windows.Forms.Cursors.Default;
             this.Char1HP.ForeColor = System.Drawing.Color.Green;
@@ -85,6 +88,7 @@
             // 
             // Char2HP
             // 
+            this.Char2HP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Char2HP.BackColor = System.Drawing.Color.White;
             this.Char2HP.Cursor = System.Windows.Forms.Cursors.Default;
             this.Char2HP.ForeColor = System.Drawing.Color.Red;
@@ -110,6 +114,7 @@
             this.Controls.Add(this.Char1HP);
             this.Controls.Add(this.Char2);
             this.Controls.Add(this.Char1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Battlescreen";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Battlescreen_Load);
