@@ -24,7 +24,7 @@ namespace The_Realest_Fitty_Game
         {
             if (data.playerchar != null)
             {
-                new Battlescreen(data).Show();
+                new Battlescreen(data, true).Show();
                 this.Visible = false;
             }
             else

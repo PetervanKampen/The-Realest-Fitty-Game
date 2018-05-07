@@ -33,6 +33,7 @@
             this.Char1HP = new System.Windows.Forms.ProgressBar();
             this.Debug = new System.Windows.Forms.Button();
             this.Char2HP = new System.Windows.Forms.ProgressBar();
+            this.Timer = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Char1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Char2)).BeginInit();
             this.SuspendLayout();
@@ -102,6 +103,16 @@
             this.Char2HP.TabIndex = 4;
             this.Char2HP.Value = 100;
             // 
+            // Timer
+            // 
+            this.Timer.AutoSize = true;
+            this.Timer.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Timer.Location = new System.Drawing.Point(590, 9);
+            this.Timer.Name = "Timer";
+            this.Timer.Size = new System.Drawing.Size(120, 31);
+            this.Timer.TabIndex = 5;
+            this.Timer.Text = "00:00:000";
+            // 
             // Battlescreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -109,6 +120,7 @@
             this.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Orc_Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1284, 731);
+            this.Controls.Add(this.Timer);
             this.Controls.Add(this.Char2HP);
             this.Controls.Add(this.Debug);
             this.Controls.Add(this.Char1HP);
@@ -121,6 +133,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Char1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Char2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -131,6 +144,7 @@
         private System.Windows.Forms.ProgressBar Char1HP;
         private System.Windows.Forms.Button Debug;
         private System.Windows.Forms.ProgressBar Char2HP;
+        private System.Windows.Forms.Label Timer;
     }
 }
 

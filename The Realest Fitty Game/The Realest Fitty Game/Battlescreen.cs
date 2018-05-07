@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,12 +14,91 @@ namespace The_Realest_Fitty_Game
     public partial class Battlescreen : Form
     {
         private Info data;
+        delegate void SetTimeCallback(string text);
 
-        public Battlescreen(Info data_)
+        public Battlescreen(Info data_, bool firstTime)
         {
             data = data_;
+
             InitializeComponent();
             Setup();
+
+            Threadstarter();
+            if (firstTime)
+            {
+                data.GameStartTime = data.timer.ElapsedMilliseconds;
+            }
+        }
+
+        public void Threadstarter()
+        {
+            Thread time =
+                new Thread(new ThreadStart(Timeupdater));
+            time.IsBackground = true;
+            time.Start();
+        }
+
+        private void Timeupdater()
+        {
+            while (true)
+            {
+                while (data.timer.IsRunning)
+                {
+                    Console.WriteLine("Test run");
+                    String time;
+                    long Millitime = (data.timer.ElapsedMilliseconds - data.GameStartTime) % 1000;
+                    long Sectime = (data.timer.ElapsedMilliseconds - data.GameStartTime) / 1000 % 60;
+                    long Mintime = (data.timer.ElapsedMilliseconds - data.GameStartTime) / 1000 / 60 % 60;
+
+                    if (Sectime.ToString().Length == 1)
+                    {
+                        if (Mintime.ToString().Length == 1)
+                        {
+                            if(Millitime.ToString().Length < 3)
+                            {
+                                if (Millitime.ToString().Length == 2)
+                                {
+                                    time = "0" + Mintime.ToString() + ":0" + Sectime.ToString() + ":0" + Millitime.ToString();
+                                }
+                                else if (Millitime.ToString().Length == 1)
+                                {
+                                    time = "0" + Mintime.ToString() + ":0" + Sectime.ToString() + ":00" + Millitime.ToString();
+                                }
+                            }
+                            time = "0" + Mintime.ToString() + ":0" + Sectime.ToString() + ":" + Millitime.ToString();
+                        }
+                        time = Mintime.ToString() + ":0" + Sectime.ToString() + ":" + Millitime.ToString();
+                    }
+                    else if (Mintime.ToString().Length == 1)
+                    {
+                        if (Millitime.ToString().Length < 3)
+                        {
+                            if (Millitime.ToString().Length == 2)
+                            {
+                                time = "0" + Mintime.ToString() + ":" + Sectime.ToString() + ":0" + Millitime.ToString();
+                            }
+                            else if (Millitime.ToString().Length == 1)
+                            {
+                                time = "0" + Mintime.ToString() + ":" + Sectime.ToString() + ":00" + Millitime.ToString();
+                            }
+                        }
+                        time = "0" + Mintime.ToString() + ":" + Sectime.ToString() + ":" + Millitime.ToString();
+                    }
+                    else
+                    {
+                        time = Mintime.ToString() + ":" + Sectime.ToString() + ":" + Millitime.ToString();
+                    }
+
+                    if (this.Timer.InvokeRequired)
+                    {
+                        this.Timer.BeginInvoke((MethodInvoker)delegate () { this.Timer.Text = time; ; });
+                    }
+                    else
+                    {
+                        this.Timer.Text = time;
+                    }
+                }
+            }
         }
 
         private void Setup()
@@ -81,7 +161,7 @@ namespace The_Realest_Fitty_Game
                 {
                     data.addCycle();
                 }
-                new Battlescreen(data).Show();
+                new Battlescreen(data, false).Show();
                 this.Visible = false;
             }
         }

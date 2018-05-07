@@ -1,0 +1,17 @@
+To Do List:
+
+- Combat
+	Very vague but i dont know yet man
+
+- Fix Fixed Stopwatch digits
+	They work, sometimes
+
+- Make Timer Label pretty
+
+- Make and Implement meaningful Settings
+
+- See if timer is more smooth on PC that is not dying
+
+- Esc brings up a menu during Battlescreen
+	Maybe make a save load function in this screen
+	Make a button to the settings screen in this screen, give token that will bring back to current gamestate
