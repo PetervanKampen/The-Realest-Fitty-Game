@@ -5,6 +5,8 @@ To Do List:
 
 - Fix Fixed Stopwatch digits
 	They work, sometimes
+	Found a thing, needs testing
+		string display = yourInt.ToString("00");
 
 - Make Timer Label pretty
 
