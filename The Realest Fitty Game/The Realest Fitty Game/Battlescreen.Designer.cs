@@ -101,7 +101,7 @@
             this.Char2HP.Step = -5;
             this.Char2HP.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.Char2HP.TabIndex = 4;
-            this.Char2HP.Value = 100;
+            this.Char2HP.Value = 100;            
             // 
             // Timer
             // 

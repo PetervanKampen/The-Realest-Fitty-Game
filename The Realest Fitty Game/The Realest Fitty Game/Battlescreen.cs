@@ -50,44 +50,7 @@ namespace The_Realest_Fitty_Game
                     long Sectime = (data.timer.ElapsedMilliseconds - data.GameStartTime) / 1000 % 60;
                     long Mintime = (data.timer.ElapsedMilliseconds - data.GameStartTime) / 1000 / 60 % 60;
 
-                    if (Sectime.ToString().Length == 1)
-                    {
-                        if (Mintime.ToString().Length == 1)
-                        {
-                            if(Millitime.ToString().Length < 3)
-                            {
-                                if (Millitime.ToString().Length == 2)
-                                {
-                                    time = "0" + Mintime.ToString() + ":0" + Sectime.ToString() + ":0" + Millitime.ToString();
-                                }
-                                else if (Millitime.ToString().Length == 1)
-                                {
-                                    time = "0" + Mintime.ToString() + ":0" + Sectime.ToString() + ":00" + Millitime.ToString();
-                                }
-                            }
-                            time = "0" + Mintime.ToString() + ":0" + Sectime.ToString() + ":" + Millitime.ToString();
-                        }
-                        time = Mintime.ToString() + ":0" + Sectime.ToString() + ":" + Millitime.ToString();
-                    }
-                    else if (Mintime.ToString().Length == 1)
-                    {
-                        if (Millitime.ToString().Length < 3)
-                        {
-                            if (Millitime.ToString().Length == 2)
-                            {
-                                time = "0" + Mintime.ToString() + ":" + Sectime.ToString() + ":0" + Millitime.ToString();
-                            }
-                            else if (Millitime.ToString().Length == 1)
-                            {
-                                time = "0" + Mintime.ToString() + ":" + Sectime.ToString() + ":00" + Millitime.ToString();
-                            }
-                        }
-                        time = "0" + Mintime.ToString() + ":" + Sectime.ToString() + ":" + Millitime.ToString();
-                    }
-                    else
-                    {
-                        time = Mintime.ToString() + ":" + Sectime.ToString() + ":" + Millitime.ToString();
-                    }
+                    time = data.NumParse(Mintime) + ":" + data.NumParse(Sectime) + ":" + data.NumParse(Millitime, true);            
 
                     if (this.Timer.InvokeRequired)
                     {
@@ -103,6 +66,7 @@ namespace The_Realest_Fitty_Game
 
         private void Setup()
         {
+            
             this.Char1.Image = data.playerchar.sprite;
             if (data.playerchar.getCharNum() == 4)
             {
@@ -136,6 +100,13 @@ namespace The_Realest_Fitty_Game
                     break;
             }
             this.Char2.Image = data.enemychar.sprite;
+
+            this.Char1HP.Maximum = data.playerchar.getHP();
+            this.Char1HP.Value = data.playerchar.getHP();
+            
+            this.Char2HP.Maximum = data.enemychar.getHP();
+            this.Char2HP.Value = data.enemychar.getHP();
+            
         }
 
         private void Battlescreen_Load(object sender, EventArgs e)
@@ -153,15 +124,20 @@ namespace The_Realest_Fitty_Game
             if (this.Char1HP.Value > 0 && this.Char2HP.Value > 0)
             {
                 this.Char1HP.Value -= 10;
-                this.Char2HP.Value -= 100;
+                this.Char2HP.Value -= data.enemychar.getHP();
             }
-            if (this.Char2HP.Value == 0)
+            if (this.Char2HP.Value <= 0)
             {
                 if (data.enemychar.getCharNum() != 4)
                 {
                     data.addCycle();
+                    new Battlescreen(data, false).Show();
                 }
-                new Battlescreen(data, false).Show();
+                else
+                {
+                    new Endscreen(data, true).Show();
+                }
+                
                 this.Visible = false;
             }
         }
@@ -202,5 +178,7 @@ namespace The_Realest_Fitty_Game
             image.Width = (int)newWidth;
             image.Height = (int)newHeight;
         }
+
+
     }
 }

@@ -25,6 +25,44 @@ namespace The_Realest_Fitty_Game
             timer.Start();
         }
 
+        public String NumParse(long num)
+        {
+            String output = "";
+            if (num.ToString().Length == 1)
+            {
+                output = "0" + num.ToString();
+            }
+            else
+            {
+                output = num.ToString();
+            }
+            return output;
+        }
+
+        public String NumParse(long num, bool milli)
+        {
+            String output = "";
+            if (num.ToString().Length == 2)
+            {
+                output = "0" + num.ToString();
+            }
+            else if (num.ToString().Length == 1)
+            {
+                output = "00" + num.ToString();
+            }
+            else
+            {
+                output = num.ToString();
+            }
+            return output;
+        }
+
+        public void reset()
+        {
+            BossCycle = 0;
+            timer.Reset();
+        }
+
         public void setSound(bool sound_) { Sound = sound_; }
         public bool getSound() { return Sound; }
 
