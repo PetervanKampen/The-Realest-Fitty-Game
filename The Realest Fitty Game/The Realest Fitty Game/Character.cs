@@ -14,6 +14,7 @@ namespace The_Realest_Fitty_Game
         protected int hp;
         protected String desription;
         public System.Drawing.Image sprite;
+        public System.Drawing.Image portrait;
 
         public Character()
         {        }

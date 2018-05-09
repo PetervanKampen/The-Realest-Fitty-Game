@@ -73,6 +73,16 @@ namespace The_Realest_Fitty_Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Aragorn_Portrait {
+            get {
+                object obj = ResourceManager.GetObject("Aragorn_Portrait", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Empty {
             get {
                 object obj = ResourceManager.GetObject("Empty", resourceCulture);
@@ -93,6 +103,16 @@ namespace The_Realest_Fitty_Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Gandalf_Portrait {
+            get {
+                object obj = ResourceManager.GetObject("Gandalf_Portrait", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Gimli {
             get {
                 object obj = ResourceManager.GetObject("Gimli", resourceCulture);
@@ -103,9 +123,29 @@ namespace The_Realest_Fitty_Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Gimli_Portrait {
+            get {
+                object obj = ResourceManager.GetObject("Gimli_Portrait", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Legolas {
             get {
                 object obj = ResourceManager.GetObject("Legolas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Legolas_Portrait {
+            get {
+                object obj = ResourceManager.GetObject("Legolas_Portrait", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

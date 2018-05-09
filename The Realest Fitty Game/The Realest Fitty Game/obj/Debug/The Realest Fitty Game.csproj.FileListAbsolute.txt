@@ -33,3 +33,4 @@ C:\Users\peter\Documents\School\GitHub\Kraken\The-Realest-Fitty-Game\The Realest
 C:\Users\peter\Documents\School\GitHub\Kraken\The-Realest-Fitty-Game\The Realest Fitty Game\The Realest Fitty Game\obj\Debug\The_Realest_Fitty_Game.Properties.Resources.resources
 C:\Users\peter\Documents\School\GitHub\Kraken\The-Realest-Fitty-Game\The Realest Fitty Game\The Realest Fitty Game\obj\Debug\The_Realest_Fitty_Game.Settings.resources
 C:\Users\peter\Documents\School\GitHub\Kraken\The-Realest-Fitty-Game\The Realest Fitty Game\The Realest Fitty Game\obj\Debug\The Realest Fitty Game.csproj.GenerateResource.Cache
+C:\Users\peter\Documents\School\GitHub\Kraken\The-Realest-Fitty-Game\The Realest Fitty Game\The Realest Fitty Game\obj\Debug\The_Realest_Fitty_Game.Endscreen.resources

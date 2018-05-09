@@ -17,6 +17,7 @@ namespace The_Realest_Fitty_Game
             hp = 120;
             desription = "A stubborn dwarf hailing from Erebor. Not very agile but definitely hits hardest.";
             sprite = global::The_Realest_Fitty_Game.Properties.Resources.Gimli;
+            portrait = global::The_Realest_Fitty_Game.Properties.Resources.Gimli_Portrait;
         }
     }
 }

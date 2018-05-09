@@ -121,17 +121,29 @@
   <data name="Aragorn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resource\Aragorn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Aragorn_Portrait" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Aragorn_Portrait.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Empty" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resource\Empty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Gandalf" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resource\Gandalf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Gandalf_Portrait" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Gandalf_Portrait.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Gimli" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resource\Gimli.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Gimli_Portrait" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Gimli_Portrait.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Legolas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resource\Legolas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Legolas_Portrait" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\Legolas_Portrait.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Menu_Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resource\Menu_Background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
