@@ -3,7 +3,7 @@ To Do List:
 - Combat
 	Very vague but i dont know yet man
 
-- Fix Fixed Stopwatch digits
+- Fix Fixed Stopwatch digits - DONE
 	They work, sometimes
 	Found a thing, needs testing
 		string display = yourInt.ToString("00");
@@ -12,7 +12,7 @@ To Do List:
 
 - Make and Implement meaningful Settings
 
-- See if timer is more smooth on PC that is not dying
+- See if timer is more smooth on PC that is not dying - NOT SMOOTH BUT ITS KINDA OKAY FOR NOW
 
 - Esc brings up a menu during Battlescreen
 	Maybe make a save load function in this screen

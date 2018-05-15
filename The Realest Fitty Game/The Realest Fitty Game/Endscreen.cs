@@ -62,10 +62,10 @@ namespace The_Realest_Fitty_Game
 
         private void Menu_Click(object sender, EventArgs e)
         {
-            new Menu(data).Show();
+            /*new Menu(data).Show();
             data.reset();
-            //this.Visible = false;
-            this.Close();
+            this.Visible = false;
+            this.Close();*/
         }
 
         private void Exit_Click(object sender, EventArgs e)
