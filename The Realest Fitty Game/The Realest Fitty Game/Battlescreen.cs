@@ -72,6 +72,11 @@ namespace The_Realest_Fitty_Game
             {
                 RescaleImage(Char1, 1.2, 0.8, false);
             }
+            else if(data.playerchar.getCharNum() == 2)
+            {
+                RescaleImage(Char1, 1.0, 1.3, false);
+                Char1.Location = new Point(70, 30);
+            }
             Console.WriteLine("Debug2");
             switch (data.getCycle())
             {
@@ -84,7 +89,7 @@ namespace The_Realest_Fitty_Game
                     data.enemychar = new Troll();
                     BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Troll_Background;
                     RescaleImage(Char2, 1.8, 1.8, true);
-                    Char2.Location = new Point(770, 38);
+                    Char2.Location = new Point(650, -140);
                     break;
 
                 case 2:
@@ -96,7 +101,7 @@ namespace The_Realest_Fitty_Game
                     data.enemychar = new Sauron();
                     BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Sauron_Background;
                     RescaleImage(Char2, 1.7, 1.7, true);
-                    Char2.Location = new Point(770, 38);
+                    Char2.Location = new Point(650, -140);
                     break;
             }
             Console.WriteLine("Debug3");

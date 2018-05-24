@@ -34,6 +34,7 @@
             this.Debug = new System.Windows.Forms.Button();
             this.Char2HP = new System.Windows.Forms.ProgressBar();
             this.Timer = new System.Windows.Forms.Label();
+            this.Turn = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Char1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Char2)).BeginInit();
             this.SuspendLayout();
@@ -43,9 +44,9 @@
             this.Char1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Char1.BackColor = System.Drawing.Color.Transparent;
             this.Char1.Image = global::The_Realest_Fitty_Game.Properties.Resources.Gandalf;
-            this.Char1.Location = new System.Drawing.Point(69, 260);
+            this.Char1.Location = new System.Drawing.Point(65, 157);
             this.Char1.Name = "Char1";
-            this.Char1.Size = new System.Drawing.Size(250, 390);
+            this.Char1.Size = new System.Drawing.Size(350, 500);
             this.Char1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Char1.TabIndex = 0;
             this.Char1.TabStop = false;
@@ -55,9 +56,9 @@
             this.Char2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Char2.BackColor = System.Drawing.Color.Transparent;
             this.Char2.Image = global::The_Realest_Fitty_Game.Properties.Resources.Saruman;
-            this.Char2.Location = new System.Drawing.Point(976, 260);
+            this.Char2.Location = new System.Drawing.Point(900, 157);
             this.Char2.Name = "Char2";
-            this.Char2.Size = new System.Drawing.Size(250, 390);
+            this.Char2.Size = new System.Drawing.Size(350, 500);
             this.Char2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Char2.TabIndex = 1;
             this.Char2.TabStop = false;
@@ -105,15 +106,29 @@
             // 
             // Timer
             // 
-            this.Timer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Timer.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Timer.AutoSize = true;
+            this.Timer.BackColor = System.Drawing.Color.Transparent;
             this.Timer.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Timer.Location = new System.Drawing.Point(590, 9);
+            this.Timer.ForeColor = System.Drawing.Color.Gold;
+            this.Timer.Location = new System.Drawing.Point(564, 9);
             this.Timer.Name = "Timer";
             this.Timer.Size = new System.Drawing.Size(135, 31);
             this.Timer.TabIndex = 5;
             this.Timer.Text = "00:00:000";
+            // 
+            // Turn
+            // 
+            this.Turn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Turn.AutoSize = true;
+            this.Turn.BackColor = System.Drawing.Color.Transparent;
+            this.Turn.Font = new System.Drawing.Font("Gigi", 46F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Turn.ForeColor = System.Drawing.Color.Gold;
+            this.Turn.Location = new System.Drawing.Point(449, 647);
+            this.Turn.Name = "Turn";
+            this.Turn.Size = new System.Drawing.Size(377, 85);
+            this.Turn.TabIndex = 6;
+            this.Turn.Text = "YOUR TURN";
             // 
             // Battlescreen
             // 
@@ -122,6 +137,7 @@
             this.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Orc_Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1284, 731);
+            this.Controls.Add(this.Turn);
             this.Controls.Add(this.Timer);
             this.Controls.Add(this.Char2HP);
             this.Controls.Add(this.Debug);
@@ -148,6 +164,7 @@
         private System.Windows.Forms.Button Debug;
         private System.Windows.Forms.ProgressBar Char2HP;
         private System.Windows.Forms.Label Timer;
+        private System.Windows.Forms.Label Turn;
     }
 }
 
