@@ -20,12 +20,15 @@ namespace The_Realest_Fitty_Game
             InitializeComponent();
         }
 
+
         private void PlayButton_Click(object sender, EventArgs e)
         {
             if (data.playerchar != null)
             {
-                new Battlescreen(data, true).Show();
-                this.Visible = false;
+                Form battle =  new Battlescreen(data, true);
+
+                battle.ShowDialog();
+                this.Hide();
             }
             else
             {
@@ -84,8 +87,10 @@ namespace The_Realest_Fitty_Game
 
         private void Return_Click(object sender, EventArgs e)
         {
-            new Menu(data).Show();
-            this.Visible = false;
+            Form menu = new Menu(data);
+
+            menu.ShowDialog();
+            this.Hide();
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -93,5 +98,11 @@ namespace The_Realest_Fitty_Game
             System.Windows.Forms.Application.Exit();
         }
 
+        private void Select_Load(object sender, EventArgs e)
+        {
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }

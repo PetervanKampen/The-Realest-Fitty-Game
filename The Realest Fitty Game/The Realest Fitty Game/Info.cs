@@ -12,6 +12,7 @@ namespace The_Realest_Fitty_Game
     public class Info
     {
         private bool Sound;
+        private bool fullscreen = true;
         public Character playerchar;
         public Character enemychar;
         private int BossCycle;
@@ -65,6 +66,9 @@ namespace The_Realest_Fitty_Game
 
         public void setSound(bool sound_) { Sound = sound_; }
         public bool getSound() { return Sound; }
+
+        public void setScreen(bool screen_) { fullscreen = screen_; }
+        public bool getScreen() { return fullscreen; }
 
         public void setCycle(int cycle) { BossCycle = cycle; }
         public void addCycle() { BossCycle++; }

@@ -66,13 +66,13 @@ namespace The_Realest_Fitty_Game
 
         private void Setup()
         {
-            
+            Console.WriteLine("Debug");
             this.Char1.Image = data.playerchar.sprite;
             if (data.playerchar.getCharNum() == 4)
             {
                 RescaleImage(Char1, 1.2, 0.8, false);
             }
-
+            Console.WriteLine("Debug2");
             switch (data.getCycle())
             {
                 case 0:
@@ -99,6 +99,7 @@ namespace The_Realest_Fitty_Game
                     Char2.Location = new Point(770, 38);
                     break;
             }
+            Console.WriteLine("Debug3");
             this.Char2.Image = data.enemychar.sprite;
 
             this.Char1HP.Maximum = data.playerchar.getHP();
@@ -106,17 +107,21 @@ namespace The_Realest_Fitty_Game
             
             this.Char2HP.Maximum = data.enemychar.getHP();
             this.Char2HP.Value = data.enemychar.getHP();
-            
+            Console.WriteLine("Debug4");
+
         }
 
         private void Battlescreen_Load(object sender, EventArgs e)
         {
-
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            System.Windows.Forms.Application.Exit();
+            
+         //   System.Windows.Forms.Application.Exit();
         }
 
         private void Debug_Click(object sender, EventArgs e)
@@ -131,14 +136,16 @@ namespace The_Realest_Fitty_Game
                 if (data.enemychar.getCharNum() != 4)
                 {
                     data.addCycle();
-                    new Battlescreen(data, false).Show();
+                    Form battle = new Battlescreen(data, false);
+                    battle.ShowDialog();
                 }
                 else
                 {
-                    new Endscreen(data, true).Show();
+                    Form end = new Endscreen(data, true);
+                    end.ShowDialog();
                 }
-                
-                this.Visible = false;
+
+                this.Close();
             }
         }
 

@@ -33,8 +33,6 @@
             this.Time = new System.Windows.Forms.Label();
             this.Exit = new System.Windows.Forms.Button();
             this.MenuButton = new System.Windows.Forms.Button();
-            this.Portrait = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.Portrait)).BeginInit();
             this.SuspendLayout();
             // 
             // Title
@@ -79,6 +77,7 @@
             // 
             // Exit
             // 
+            this.Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Exit.BackColor = System.Drawing.Color.Transparent;
             this.Exit.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Ring_Text;
             this.Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -88,9 +87,9 @@
             this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Exit.Font = new System.Drawing.Font("Gigi", 36F);
             this.Exit.ForeColor = System.Drawing.Color.Gold;
-            this.Exit.Location = new System.Drawing.Point(1027, 587);
+            this.Exit.Location = new System.Drawing.Point(997, 567);
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(245, 132);
+            this.Exit.Size = new System.Drawing.Size(275, 152);
             this.Exit.TabIndex = 12;
             this.Exit.Text = "Exit";
             this.Exit.UseVisualStyleBackColor = false;
@@ -98,6 +97,7 @@
             // 
             // MenuButton
             // 
+            this.MenuButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.MenuButton.BackColor = System.Drawing.Color.Transparent;
             this.MenuButton.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Ring_Text;
             this.MenuButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -107,24 +107,13 @@
             this.MenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MenuButton.Font = new System.Drawing.Font("Gigi", 36F);
             this.MenuButton.ForeColor = System.Drawing.Color.Gold;
-            this.MenuButton.Location = new System.Drawing.Point(1027, 429);
+            this.MenuButton.Location = new System.Drawing.Point(997, 414);
             this.MenuButton.Name = "MenuButton";
-            this.MenuButton.Size = new System.Drawing.Size(245, 132);
+            this.MenuButton.Size = new System.Drawing.Size(275, 147);
             this.MenuButton.TabIndex = 13;
             this.MenuButton.Text = "Menu";
             this.MenuButton.UseVisualStyleBackColor = false;
             this.MenuButton.Click += new System.EventHandler(this.Menu_Click);
-            // 
-            // Portrait
-            // 
-            this.Portrait.BackColor = System.Drawing.Color.Transparent;
-            this.Portrait.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Portrait.Location = new System.Drawing.Point(454, 183);
-            this.Portrait.Name = "Portrait";
-            this.Portrait.Size = new System.Drawing.Size(355, 355);
-            this.Portrait.TabIndex = 14;
-            this.Portrait.TabStop = false;
-            this.Portrait.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             // 
             // Endscreen
             // 
@@ -133,7 +122,6 @@
             this.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Menu_Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1284, 731);
-            this.Controls.Add(this.Portrait);
             this.Controls.Add(this.MenuButton);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.Time);
@@ -143,7 +131,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Endscreen";
             this.Text = "Endscreen";
-            ((System.ComponentModel.ISupportInitialize)(this.Portrait)).EndInit();
+            this.Load += new System.EventHandler(this.Endscreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,6 +144,5 @@
         private System.Windows.Forms.Label Time;
         private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.Button MenuButton;
-        private System.Windows.Forms.PictureBox Portrait;
     }
 }

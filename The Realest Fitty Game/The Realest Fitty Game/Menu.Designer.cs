@@ -50,6 +50,9 @@
             // 
             // PlayButton
             // 
+            this.PlayButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PlayButton.BackColor = System.Drawing.Color.Transparent;
             this.PlayButton.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Empty;
             this.PlayButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -69,6 +72,7 @@
             // 
             // Settings
             // 
+            this.Settings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Settings.BackColor = System.Drawing.Color.Transparent;
             this.Settings.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Ring_Text;
             this.Settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -88,6 +92,7 @@
             // 
             // Exit
             // 
+            this.Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Exit.BackColor = System.Drawing.Color.Transparent;
             this.Exit.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Ring_Text;
             this.Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

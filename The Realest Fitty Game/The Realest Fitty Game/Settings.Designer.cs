@@ -35,6 +35,7 @@
             // 
             // Settings_Title
             // 
+            this.Settings_Title.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Settings_Title.AutoSize = true;
             this.Settings_Title.BackColor = System.Drawing.Color.Transparent;
             this.Settings_Title.Font = new System.Drawing.Font("Gigi", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -48,6 +49,7 @@
             // 
             // SoundBox
             // 
+            this.SoundBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.SoundBox.Appearance = System.Windows.Forms.Appearance.Button;
             this.SoundBox.AutoSize = true;
             this.SoundBox.BackColor = System.Drawing.Color.Transparent;
@@ -56,14 +58,16 @@
             this.SoundBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.SoundBox.FlatAppearance.BorderSize = 0;
             this.SoundBox.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.SoundBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.SoundBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.SoundBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SoundBox.Font = new System.Drawing.Font("Gigi", 45F);
+            this.SoundBox.Font = new System.Drawing.Font("Gigi", 35F);
             this.SoundBox.ForeColor = System.Drawing.Color.Gold;
-            this.SoundBox.Location = new System.Drawing.Point(420, 216);
+            this.SoundBox.Location = new System.Drawing.Point(470, 231);
             this.SoundBox.Name = "SoundBox";
-            this.SoundBox.Size = new System.Drawing.Size(429, 93);
+            this.SoundBox.Size = new System.Drawing.Size(369, 75);
             this.SoundBox.TabIndex = 7;
-            this.SoundBox.Text = "Sound: <- ON ->";
+            this.SoundBox.Text = "Sound: <- ON    ->";
             this.SoundBox.UseVisualStyleBackColor = false;
             this.SoundBox.CheckedChanged += new System.EventHandler(this.SoundBox_CheckedChanged);
             // 
@@ -89,6 +93,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Menu_Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1284, 731);
             this.Controls.Add(this.Return);
@@ -98,6 +103,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Settings";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Settings_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

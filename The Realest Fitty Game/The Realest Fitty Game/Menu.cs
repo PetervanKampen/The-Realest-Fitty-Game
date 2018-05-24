@@ -22,19 +22,30 @@ namespace The_Realest_Fitty_Game
 
         private void Menu_Load(object sender, EventArgs e)
         {
-
+            if (data.getScreen())
+            {
+                this.TopMost = true;
+                this.FormBorderStyle = FormBorderStyle.None;
+                this.WindowState = FormWindowState.Maximized;
+            }
         }
 
         private void PlayButton_Click(object sender, EventArgs e)
         {
-            new Select(data).Show();
-            this.Visible = false;
+            //new Select(data).Show();
+            Form select = new Select(data);
+
+            select.Show();
+            this.Hide();
         }
 
         private void Settings_Click(object sender, EventArgs e)
         {
-            new Settings(data).Show();
-            this.Visible = false;
+            //new Settings(data).Show();
+            Form setting = new Settings(data);
+            
+            setting.Show();
+            this.Hide();
         }
 
         private void Exit_Click(object sender, EventArgs e)
@@ -44,7 +55,10 @@ namespace The_Realest_Fitty_Game
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            System.Windows.Forms.Application.Exit();
+            if (!data.getScreen())
+            {
+                System.Windows.Forms.Application.Exit();
+            }
         }
     }
 }

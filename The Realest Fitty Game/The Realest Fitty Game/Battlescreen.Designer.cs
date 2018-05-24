@@ -101,15 +101,17 @@
             this.Char2HP.Step = -5;
             this.Char2HP.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.Char2HP.TabIndex = 4;
-            this.Char2HP.Value = 100;            
+            this.Char2HP.Value = 100;
             // 
             // Timer
             // 
+            this.Timer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Timer.AutoSize = true;
             this.Timer.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Timer.Location = new System.Drawing.Point(590, 9);
             this.Timer.Name = "Timer";
-            this.Timer.Size = new System.Drawing.Size(120, 31);
+            this.Timer.Size = new System.Drawing.Size(135, 31);
             this.Timer.TabIndex = 5;
             this.Timer.Text = "00:00:000";
             // 
@@ -126,6 +128,7 @@
             this.Controls.Add(this.Char1HP);
             this.Controls.Add(this.Char2);
             this.Controls.Add(this.Char1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Battlescreen";
             this.Text = "Form1";

@@ -44,7 +44,7 @@ namespace The_Realest_Fitty_Game
             }
 
             this.Time.Text = getTime();
-            this.Portrait.Image = data.playerchar.portrait;
+        //    this.Portrait.Image = data.playerchar.portrait;
         }
 
         private String getTime()
@@ -78,6 +78,11 @@ namespace The_Realest_Fitty_Game
             System.Windows.Forms.Application.Exit();
         }
 
-        
+        private void Endscreen_Load(object sender, EventArgs e)
+        {
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }
