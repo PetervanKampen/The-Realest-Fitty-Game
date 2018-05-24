@@ -28,7 +28,7 @@ namespace The_Realest_Fitty_Game
                 Form battle =  new Battlescreen(data, true);
 
                 battle.ShowDialog();
-                this.Hide();
+                this.Dispose();
             }
             else
             {
@@ -90,12 +90,12 @@ namespace The_Realest_Fitty_Game
             Form menu = new Menu(data);
 
             menu.ShowDialog();
-            this.Hide();
+            this.Dispose();
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            System.Windows.Forms.Application.Exit();
+        //    System.Windows.Forms.Application.Exit();
         }
 
         private void Select_Load(object sender, EventArgs e)

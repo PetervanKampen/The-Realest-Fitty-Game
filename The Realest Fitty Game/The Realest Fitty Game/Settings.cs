@@ -36,7 +36,7 @@ namespace The_Realest_Fitty_Game
         {
             if (!data.getScreen())
             {
-                System.Windows.Forms.Application.Exit();
+            //    System.Windows.Forms.Application.Exit();
             }
         }
 
@@ -50,7 +50,7 @@ namespace The_Realest_Fitty_Game
             Form menu = new Menu(data);
           
             menu.Show();
-            this.Close();
+            this.Dispose();
         }
 
         private void Settings_Load(object sender, EventArgs e)

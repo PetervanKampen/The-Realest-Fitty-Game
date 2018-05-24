@@ -35,8 +35,8 @@ namespace The_Realest_Fitty_Game
             //new Select(data).Show();
             Form select = new Select(data);
 
-            select.Show();
-            this.Hide();
+            select.ShowDialog();
+            this.Dispose();
         }
 
         private void Settings_Click(object sender, EventArgs e)
@@ -44,8 +44,8 @@ namespace The_Realest_Fitty_Game
             //new Settings(data).Show();
             Form setting = new Settings(data);
             
-            setting.Show();
-            this.Hide();
+            setting.ShowDialog();
+            this.Dispose();
         }
 
         private void Exit_Click(object sender, EventArgs e)
@@ -57,7 +57,7 @@ namespace The_Realest_Fitty_Game
         {
             if (!data.getScreen())
             {
-                System.Windows.Forms.Application.Exit();
+           //     System.Windows.Forms.Application.Exit();
             }
         }
     }

@@ -145,7 +145,7 @@ namespace The_Realest_Fitty_Game
                     end.ShowDialog();
                 }
 
-                this.Close();
+                this.Dispose();
             }
         }
 
