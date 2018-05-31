@@ -15,6 +15,8 @@ namespace The_Realest_Fitty_Game
             Charnum = 1;
             enemy = false;
             hp = 100;
+            AD = 12;
+            defense = 8;
             desription = "A kind wizard sent to help in the fight against evil.";
             sprite = global::The_Realest_Fitty_Game.Properties.Resources.Gandalf;
             portrait = global::The_Realest_Fitty_Game.Properties.Resources.Gandalf_Portrait;

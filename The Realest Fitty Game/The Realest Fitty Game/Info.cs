@@ -13,6 +13,7 @@ namespace The_Realest_Fitty_Game
     {
         private bool Sound;
         private bool fullscreen = true;
+        public bool playerturn = true;
         public Character playerchar;
         public Character enemychar;
         private int BossCycle;
@@ -56,6 +57,30 @@ namespace The_Realest_Fitty_Game
                 output = num.ToString();
             }
             return output;
+        }
+
+        public String getAttackDescription(String attackName)
+        {
+            String answer = "";
+            switch (attackName)
+            {
+                case "Attack 1":
+                    answer = "Attack 1";
+                    break;
+                case "Attack 2":
+                    answer = "Attack 2";
+                    break;
+                case "Attack 3":
+                    answer = "Attack 3";
+                    break;
+                case "Attack 4":
+                    answer = "Attack 4";
+                    break;
+                case "Attack 5":
+                    answer = "Attack 5";
+                    break;
+            }
+            return answer;
         }
 
         public void reset()

@@ -15,7 +15,9 @@ namespace The_Realest_Fitty_Game
             Charnum = 4;
             enemy = false;
             hp = 120;
-            desription = "A stubborn dwarf hailing from Erebor. Not very agile but definitely hits hardest.";
+            AD = 10;
+            defense = 15;
+            desription = "A stubborn dwarf hailing from Erebor. Not very agile but definitely the sturdiest.";
             sprite = global::The_Realest_Fitty_Game.Properties.Resources.Gimli;
             portrait = global::The_Realest_Fitty_Game.Properties.Resources.Gimli_Portrait;
         }

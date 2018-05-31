@@ -68,6 +68,7 @@ namespace The_Realest_Fitty_Game
         {
             Console.WriteLine("Debug");
             this.Char1.Image = data.playerchar.sprite;
+
             if (data.playerchar.getCharNum() == 4)
             {
                 RescaleImage(Char1, 1.2, 0.8, false);
@@ -77,6 +78,9 @@ namespace The_Realest_Fitty_Game
                 RescaleImage(Char1, 1.0, 1.3, false);
                 Char1.Location = new Point(70, 30);
             }
+
+            this.playerDamage.Text = "Attack Damage: "+ data.playerchar.getAD();
+            this.playerDefense.Text = "Defense Rating: " + data.playerchar.getDefense();
             Console.WriteLine("Debug2");
             switch (data.getCycle())
             {
@@ -116,6 +120,41 @@ namespace The_Realest_Fitty_Game
 
         }
 
+        private void attack1Hover(object sender, EventArgs e)
+        {
+            this.detailsPanel.Visible = true;
+            this.detailsLabel.Text = data.getAttackDescription(this.attack1.Text);
+        }
+
+        private void attack2Hover(object sender, EventArgs e)
+        {
+            this.detailsPanel.Visible = true;
+            this.detailsLabel.Text = data.getAttackDescription(this.attack2.Text);
+        }
+
+        private void attack3Hover(object sender, EventArgs e)
+        {
+            this.detailsPanel.Visible = true;
+            this.detailsLabel.Text = data.getAttackDescription(this.attack3.Text);
+        }
+
+        private void attack4Hover(object sender, EventArgs e)
+        {
+            this.detailsPanel.Visible = true;
+            this.detailsLabel.Text = data.getAttackDescription(this.attack4.Text);
+        }
+
+        private void attack5Hover(object sender, EventArgs e)
+        {
+            this.detailsPanel.Visible = true;
+            this.detailsLabel.Text = data.getAttackDescription(this.attack5.Text);
+        }
+
+        private void attackLeave(object sender, EventArgs e)
+        {
+            this.detailsPanel.Visible = false;
+        }
+
         private void Battlescreen_Load(object sender, EventArgs e)
         {
             this.TopMost = true;
@@ -131,10 +170,11 @@ namespace The_Realest_Fitty_Game
 
         private void Debug_Click(object sender, EventArgs e)
         {
+            turnSwap();
             if (this.Char1HP.Value > 0 && this.Char2HP.Value > 0)
             {
                 this.Char1HP.Value -= 10;
-                this.Char2HP.Value -= data.enemychar.getHP();
+                this.Char2HP.Value -= (data.enemychar.getHP() / 2);
             }
             if (this.Char2HP.Value <= 0)
             {
@@ -191,6 +231,55 @@ namespace The_Realest_Fitty_Game
             image.Height = (int)newHeight;
         }
 
+        private void turnSwap()
+        {
+            if (data.playerturn)
+            {
+                this.attackPanel.Visible = false;
+                this.Turn.Text = "ENEMY TURN";
+                this.attackButton.ForeColor = System.Drawing.Color.Gray;
+                this.defendButton.ForeColor = System.Drawing.Color.Gray;
+                data.playerturn = false;
+            }
+            else
+            {
+                this.Turn.Text = "YOUR TURN";
+                this.attackButton.ForeColor = System.Drawing.Color.Gold;
+                this.defendButton.ForeColor = System.Drawing.Color.Gold;
+                data.playerturn = true;
+            }
+        }
 
+        private void attackButton_Click(object sender, EventArgs e)
+        {
+            if (data.playerturn)
+            {
+                if (!this.attackPanel.Visible)
+                {
+                    this.attackPanel.Visible = true;
+                }
+                else if (this.attackPanel.Visible)
+                {
+                    this.attackPanel.Visible = false;
+                }
+            }
+        }
+
+        private void playerDefense_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void defendButton_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
+
+        private void attack1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
