@@ -17,7 +17,7 @@ namespace The_Realest_Fitty_Game
             hp = 100;
             AD = 10;
             defense = 10;
-            desription = "The exiled King of Gondor, an agile swordsman wielding a two handed blade.";
+            desription = "Flame of the West: Deals more damage for each succesful consecutive attack.";
             sprite = global::The_Realest_Fitty_Game.Properties.Resources.Aragorn;
             portrait = global::The_Realest_Fitty_Game.Properties.Resources.Aragorn_Portrait;
         }

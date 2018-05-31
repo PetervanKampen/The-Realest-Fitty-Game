@@ -16,7 +16,7 @@ namespace The_Realest_Fitty_Game
             hp = 90;
             AD = 11;
             defense = 8;
-            desription = "The prince of the elven kingdom of Mirkwood, wielding a bow with deadeye accuracy.";
+            desription = "Elven Insight: Gain one free turn at the start of each fight.";
             sprite = global::The_Realest_Fitty_Game.Properties.Resources.Legolas;
             portrait = global::The_Realest_Fitty_Game.Properties.Resources.Legolas_Portrait;
         }

@@ -17,7 +17,7 @@ namespace The_Realest_Fitty_Game
             hp = 100;
             AD = 12;
             defense = 8;
-            desription = "A kind wizard sent to help in the fight against evil.";
+            desription = "Spell Flux: Regain Spell Uses after each succesful fight.";
             sprite = global::The_Realest_Fitty_Game.Properties.Resources.Gandalf;
             portrait = global::The_Realest_Fitty_Game.Properties.Resources.Gandalf_Portrait;
         }
