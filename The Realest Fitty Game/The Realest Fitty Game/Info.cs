@@ -65,10 +65,10 @@ namespace The_Realest_Fitty_Game
             switch (attackName)
             {
                 case "Attack 1":
-                    answer = "Attack 1";
+                    answer = "A quick and decisive attack. \n Uses Remaining: ∞";
                     break;
                 case "Attack 2":
-                    answer = "Attack 2";
+                    answer = "A hard hitting but slow attack. \n Uses Remaining: ∞";
                     break;
                 case "Attack 3":
                     answer = "Attack 3";

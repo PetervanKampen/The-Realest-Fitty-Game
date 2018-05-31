@@ -49,12 +49,15 @@
             this.controlPanel = new System.Windows.Forms.Panel();
             this.detailsPanel = new System.Windows.Forms.Panel();
             this.detailsLabel = new System.Windows.Forms.Label();
+            this.modifierPanel = new System.Windows.Forms.Panel();
+            this.modifierLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Char1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Char2)).BeginInit();
             this.attackPanel.SuspendLayout();
             this.statPanel.SuspendLayout();
             this.controlPanel.SuspendLayout();
             this.detailsPanel.SuspendLayout();
+            this.modifierPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Char1
@@ -126,11 +129,11 @@
             // 
             this.Timer.AutoSize = true;
             this.Timer.BackColor = System.Drawing.Color.Transparent;
-            this.Timer.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Timer.Font = new System.Drawing.Font("Gigi", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Timer.ForeColor = System.Drawing.Color.Gold;
             this.Timer.Location = new System.Drawing.Point(15, 13);
             this.Timer.Name = "Timer";
-            this.Timer.Size = new System.Drawing.Size(135, 31);
+            this.Timer.Size = new System.Drawing.Size(113, 37);
             this.Timer.TabIndex = 5;
             this.Timer.Text = "00:00:000";
             // 
@@ -151,11 +154,11 @@
             // 
             this.playerDamage.AutoSize = true;
             this.playerDamage.BackColor = System.Drawing.Color.Transparent;
-            this.playerDamage.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerDamage.Font = new System.Drawing.Font("Gigi", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playerDamage.ForeColor = System.Drawing.Color.Gold;
             this.playerDamage.Location = new System.Drawing.Point(12, 62);
             this.playerDamage.Name = "playerDamage";
-            this.playerDamage.Size = new System.Drawing.Size(215, 31);
+            this.playerDamage.Size = new System.Drawing.Size(195, 37);
             this.playerDamage.TabIndex = 7;
             this.playerDamage.Text = "Attack Damage: ";
             // 
@@ -163,11 +166,11 @@
             // 
             this.playerDefense.AutoSize = true;
             this.playerDefense.BackColor = System.Drawing.Color.Transparent;
-            this.playerDefense.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerDefense.Font = new System.Drawing.Font("Gigi", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playerDefense.ForeColor = System.Drawing.Color.Gold;
             this.playerDefense.Location = new System.Drawing.Point(12, 93);
             this.playerDefense.Name = "playerDefense";
-            this.playerDefense.Size = new System.Drawing.Size(217, 31);
+            this.playerDefense.Size = new System.Drawing.Size(198, 37);
             this.playerDefense.TabIndex = 8;
             this.playerDefense.Text = "Defense Rating: ";
             this.playerDefense.Click += new System.EventHandler(this.playerDefense_Click);
@@ -183,7 +186,7 @@
             this.attackPanel.Controls.Add(this.attack1);
             this.attackPanel.Location = new System.Drawing.Point(298, 12);
             this.attackPanel.Name = "attackPanel";
-            this.attackPanel.Size = new System.Drawing.Size(974, 140);
+            this.attackPanel.Size = new System.Drawing.Size(974, 139);
             this.attackPanel.TabIndex = 9;
             this.attackPanel.Visible = false;
             // 
@@ -196,7 +199,7 @@
             this.attack5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.attack5.Font = new System.Drawing.Font("Gigi", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.attack5.ForeColor = System.Drawing.Color.Gold;
-            this.attack5.Location = new System.Drawing.Point(780, 13);
+            this.attack5.Location = new System.Drawing.Point(780, 12);
             this.attack5.Name = "attack5";
             this.attack5.Size = new System.Drawing.Size(186, 111);
             this.attack5.TabIndex = 18;
@@ -214,7 +217,7 @@
             this.attack4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.attack4.Font = new System.Drawing.Font("Gigi", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.attack4.ForeColor = System.Drawing.Color.Gold;
-            this.attack4.Location = new System.Drawing.Point(588, 13);
+            this.attack4.Location = new System.Drawing.Point(588, 12);
             this.attack4.Name = "attack4";
             this.attack4.Size = new System.Drawing.Size(186, 111);
             this.attack4.TabIndex = 17;
@@ -232,7 +235,7 @@
             this.attack3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.attack3.Font = new System.Drawing.Font("Gigi", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.attack3.ForeColor = System.Drawing.Color.Gold;
-            this.attack3.Location = new System.Drawing.Point(396, 13);
+            this.attack3.Location = new System.Drawing.Point(396, 12);
             this.attack3.Name = "attack3";
             this.attack3.Size = new System.Drawing.Size(186, 111);
             this.attack3.TabIndex = 16;
@@ -250,11 +253,11 @@
             this.attack2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.attack2.Font = new System.Drawing.Font("Gigi", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.attack2.ForeColor = System.Drawing.Color.Gold;
-            this.attack2.Location = new System.Drawing.Point(204, 13);
+            this.attack2.Location = new System.Drawing.Point(204, 12);
             this.attack2.Name = "attack2";
             this.attack2.Size = new System.Drawing.Size(186, 111);
             this.attack2.TabIndex = 14;
-            this.attack2.Text = "Attack 2";
+            this.attack2.Text = "Heavy Attack";
             this.attack2.UseVisualStyleBackColor = false;
             this.attack2.MouseLeave += new System.EventHandler(this.attackLeave);
             this.attack2.MouseHover += new System.EventHandler(this.attack2Hover);
@@ -268,11 +271,11 @@
             this.attack1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.attack1.Font = new System.Drawing.Font("Gigi", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.attack1.ForeColor = System.Drawing.Color.Gold;
-            this.attack1.Location = new System.Drawing.Point(12, 13);
+            this.attack1.Location = new System.Drawing.Point(12, 12);
             this.attack1.Name = "attack1";
             this.attack1.Size = new System.Drawing.Size(186, 111);
             this.attack1.TabIndex = 13;
-            this.attack1.Text = "Attack 1";
+            this.attack1.Text = "Light Attack";
             this.attack1.UseVisualStyleBackColor = false;
             this.attack1.Click += new System.EventHandler(this.attack1_Click);
             this.attack1.MouseLeave += new System.EventHandler(this.attackLeave);
@@ -337,11 +340,12 @@
             // 
             // detailsPanel
             // 
+            this.detailsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.detailsPanel.BackColor = System.Drawing.Color.Black;
             this.detailsPanel.Controls.Add(this.detailsLabel);
-            this.detailsPanel.Location = new System.Drawing.Point(12, 157);
+            this.detailsPanel.Location = new System.Drawing.Point(992, 157);
             this.detailsPanel.Name = "detailsPanel";
-            this.detailsPanel.Size = new System.Drawing.Size(280, 135);
+            this.detailsPanel.Size = new System.Drawing.Size(280, 150);
             this.detailsPanel.TabIndex = 14;
             this.detailsPanel.Visible = false;
             // 
@@ -349,13 +353,37 @@
             // 
             this.detailsLabel.AutoSize = true;
             this.detailsLabel.BackColor = System.Drawing.Color.Transparent;
-            this.detailsLabel.Font = new System.Drawing.Font("Gigi", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.detailsLabel.Font = new System.Drawing.Font("Gigi", 22F);
             this.detailsLabel.ForeColor = System.Drawing.Color.Gold;
             this.detailsLabel.Location = new System.Drawing.Point(3, 9);
+            this.detailsLabel.MaximumSize = new System.Drawing.Size(280, 150);
             this.detailsLabel.Name = "detailsLabel";
-            this.detailsLabel.Size = new System.Drawing.Size(164, 30);
+            this.detailsLabel.Size = new System.Drawing.Size(93, 41);
             this.detailsLabel.TabIndex = 0;
-            this.detailsLabel.Text = "Placeholder Text";
+            this.detailsLabel.Text = "Blyat";
+            // 
+            // modifierPanel
+            // 
+            this.modifierPanel.BackColor = System.Drawing.Color.Black;
+            this.modifierPanel.Controls.Add(this.modifierLabel);
+            this.modifierPanel.Location = new System.Drawing.Point(12, 157);
+            this.modifierPanel.Name = "modifierPanel";
+            this.modifierPanel.Size = new System.Drawing.Size(280, 150);
+            this.modifierPanel.TabIndex = 15;
+            this.modifierPanel.Visible = false;
+            // 
+            // modifierLabel
+            // 
+            this.modifierLabel.AutoSize = true;
+            this.modifierLabel.BackColor = System.Drawing.Color.Transparent;
+            this.modifierLabel.Font = new System.Drawing.Font("Gigi", 22F);
+            this.modifierLabel.ForeColor = System.Drawing.Color.Gold;
+            this.modifierLabel.Location = new System.Drawing.Point(3, 9);
+            this.modifierLabel.MaximumSize = new System.Drawing.Size(280, 150);
+            this.modifierLabel.Name = "modifierLabel";
+            this.modifierLabel.Size = new System.Drawing.Size(93, 41);
+            this.modifierLabel.TabIndex = 0;
+            this.modifierLabel.Text = "Blyat";
             // 
             // Battlescreen
             // 
@@ -364,6 +392,7 @@
             this.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Orc_Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1284, 731);
+            this.Controls.Add(this.modifierPanel);
             this.Controls.Add(this.detailsPanel);
             this.Controls.Add(this.controlPanel);
             this.Controls.Add(this.statPanel);
@@ -387,6 +416,8 @@
             this.controlPanel.PerformLayout();
             this.detailsPanel.ResumeLayout(false);
             this.detailsPanel.PerformLayout();
+            this.modifierPanel.ResumeLayout(false);
+            this.modifierPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -414,6 +445,8 @@
         private System.Windows.Forms.Panel controlPanel;
         private System.Windows.Forms.Panel detailsPanel;
         private System.Windows.Forms.Label detailsLabel;
+        private System.Windows.Forms.Panel modifierPanel;
+        private System.Windows.Forms.Label modifierLabel;
     }
 }
 

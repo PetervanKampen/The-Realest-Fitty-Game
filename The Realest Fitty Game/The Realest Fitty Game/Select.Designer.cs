@@ -37,6 +37,7 @@
             this.Gimli_Button = new System.Windows.Forms.Button();
             this.Description = new System.Windows.Forms.Label();
             this.Return = new System.Windows.Forms.Button();
+            this.passiveLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // PlayButton
@@ -179,6 +180,19 @@
             this.Return.UseVisualStyleBackColor = false;
             this.Return.Click += new System.EventHandler(this.Return_Click);
             // 
+            // passiveLabel
+            // 
+            this.passiveLabel.BackColor = System.Drawing.Color.Transparent;
+            this.passiveLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.passiveLabel.Font = new System.Drawing.Font("Gigi", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passiveLabel.ForeColor = System.Drawing.Color.Gold;
+            this.passiveLabel.Location = new System.Drawing.Point(0, 625);
+            this.passiveLabel.Name = "passiveLabel";
+            this.passiveLabel.Size = new System.Drawing.Size(1284, 53);
+            this.passiveLabel.TabIndex = 12;
+            this.passiveLabel.Text = "Chararcter Passive:";
+            this.passiveLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Select
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,6 +201,7 @@
             this.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Menu_Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1284, 731);
+            this.Controls.Add(this.passiveLabel);
             this.Controls.Add(this.Return);
             this.Controls.Add(this.Description);
             this.Controls.Add(this.Gimli_Button);
@@ -215,5 +230,6 @@
         private System.Windows.Forms.Button Gimli_Button;
         private System.Windows.Forms.Label Description;
         private System.Windows.Forms.Button Return;
+        private System.Windows.Forms.Label passiveLabel;
     }
 }

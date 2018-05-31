@@ -123,31 +123,31 @@ namespace The_Realest_Fitty_Game
         private void attack1Hover(object sender, EventArgs e)
         {
             this.detailsPanel.Visible = true;
-            this.detailsLabel.Text = data.getAttackDescription(this.attack1.Text);
+            this.detailsLabel.Text = data.getAttackDescription("Attack 1");
         }
 
         private void attack2Hover(object sender, EventArgs e)
         {
             this.detailsPanel.Visible = true;
-            this.detailsLabel.Text = data.getAttackDescription(this.attack2.Text);
+            this.detailsLabel.Text = data.getAttackDescription("Attack 2");
         }
 
         private void attack3Hover(object sender, EventArgs e)
         {
             this.detailsPanel.Visible = true;
-            this.detailsLabel.Text = data.getAttackDescription(this.attack3.Text);
+            this.detailsLabel.Text = data.getAttackDescription("Attack 3");
         }
 
         private void attack4Hover(object sender, EventArgs e)
         {
             this.detailsPanel.Visible = true;
-            this.detailsLabel.Text = data.getAttackDescription(this.attack4.Text);
+            this.detailsLabel.Text = data.getAttackDescription("Attack 4");
         }
 
         private void attack5Hover(object sender, EventArgs e)
         {
             this.detailsPanel.Visible = true;
-            this.detailsLabel.Text = data.getAttackDescription(this.attack5.Text);
+            this.detailsLabel.Text = data.getAttackDescription("Attack 5");
         }
 
         private void attackLeave(object sender, EventArgs e)
