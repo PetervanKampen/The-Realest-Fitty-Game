@@ -17,6 +17,7 @@ namespace The_Realest_Fitty_Game
             hp = 120;
             AD = 10;
             defense = 15;
+            passive = "Dwarven Sturdiness";
             desription = "Dwarven Sturdiness: Regain portion of lost HP at the start of each turn.";
             sprite = global::The_Realest_Fitty_Game.Properties.Resources.Gimli;
             portrait = global::The_Realest_Fitty_Game.Properties.Resources.Gimli_Portrait;

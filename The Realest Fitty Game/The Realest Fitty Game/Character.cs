@@ -15,6 +15,7 @@ namespace The_Realest_Fitty_Game
         protected int AD;
         protected int defense;
         protected String desription;
+        protected String passive;
         public System.Drawing.Image sprite;
         public System.Drawing.Image portrait;
 
@@ -41,6 +42,9 @@ namespace The_Realest_Fitty_Game
 
         public void setDesription(String descrip) { desription = descrip; }
         public String getDescription() { return desription; }
+
+        public void setPassive(String passive_) { passive = passive_; }
+        public String getPassive() { return passive; }
 
     }
 }
