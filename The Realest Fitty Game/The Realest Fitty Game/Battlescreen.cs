@@ -67,7 +67,10 @@ namespace The_Realest_Fitty_Game
         private void Setup()
         {
             Console.WriteLine("Debug");
+
             this.Char1.Image = data.playerchar.sprite;
+
+            this.modifierLabel.Text += ("- " + data.playerchar.getPassive());
 
             if (data.playerchar.getCharNum() == 4)
             {
@@ -108,6 +111,7 @@ namespace The_Realest_Fitty_Game
                     Char2.Location = new Point(650, -140);
                     break;
             }
+
             Console.WriteLine("Debug3");
             this.Char2.Image = data.enemychar.sprite;
 
@@ -277,9 +281,37 @@ namespace The_Realest_Fitty_Game
 
         private void attack1_Click(object sender, EventArgs e)
         {
-
+            this.actionPanel.Visible = true;
+            this.action2Label.Text = this.action1Label.Text;
+            this.action1Label.Text = data.playerchar.getName() + " used " + this.attack1.Text;
         }
 
-        
+        private void attack2_Click(object sender, EventArgs e)
+        {
+            this.actionPanel.Visible = true;
+            this.action2Label.Text = this.action1Label.Text;
+            this.action1Label.Text = data.playerchar.getName() + " used " + this.attack2.Text;
+        }
+
+        private void attack3_Click(object sender, EventArgs e)
+        {
+            this.actionPanel.Visible = true;
+            this.action2Label.Text = this.action1Label.Text;
+            this.action1Label.Text = data.playerchar.getName() + " used " + this.attack3.Text;
+        }
+
+        private void attack4_Click(object sender, EventArgs e)
+        {
+            this.actionPanel.Visible = true;
+            this.action2Label.Text = this.action1Label.Text;
+            this.action1Label.Text = data.playerchar.getName() + " used " + this.attack4.Text;
+        }
+
+        private void attack5_Click(object sender, EventArgs e)
+        {
+            this.actionPanel.Visible = true;
+            this.action2Label.Text = this.action1Label.Text;
+            this.action1Label.Text = data.playerchar.getName() + " used " + this.attack5.Text;
+        }
     }
 }

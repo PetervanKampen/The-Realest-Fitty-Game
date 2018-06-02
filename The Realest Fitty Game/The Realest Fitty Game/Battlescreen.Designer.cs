@@ -51,6 +51,9 @@
             this.detailsLabel = new System.Windows.Forms.Label();
             this.modifierPanel = new System.Windows.Forms.Panel();
             this.modifierLabel = new System.Windows.Forms.Label();
+            this.actionPanel = new System.Windows.Forms.Panel();
+            this.action1Label = new System.Windows.Forms.Label();
+            this.action2Label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Char1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Char2)).BeginInit();
             this.attackPanel.SuspendLayout();
@@ -58,6 +61,7 @@
             this.controlPanel.SuspendLayout();
             this.detailsPanel.SuspendLayout();
             this.modifierPanel.SuspendLayout();
+            this.actionPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Char1
@@ -101,7 +105,7 @@
             // 
             // Debug
             // 
-            this.Debug.Location = new System.Drawing.Point(613, 515);
+            this.Debug.Location = new System.Drawing.Point(613, 179);
             this.Debug.Name = "Debug";
             this.Debug.Size = new System.Drawing.Size(75, 23);
             this.Debug.TabIndex = 3;
@@ -205,6 +209,7 @@
             this.attack5.TabIndex = 18;
             this.attack5.Text = "Attack 5";
             this.attack5.UseVisualStyleBackColor = false;
+            this.attack5.Click += new System.EventHandler(this.attack5_Click);
             this.attack5.MouseLeave += new System.EventHandler(this.attackLeave);
             this.attack5.MouseHover += new System.EventHandler(this.attack5Hover);
             // 
@@ -223,6 +228,7 @@
             this.attack4.TabIndex = 17;
             this.attack4.Text = "Attack 4";
             this.attack4.UseVisualStyleBackColor = false;
+            this.attack4.Click += new System.EventHandler(this.attack4_Click);
             this.attack4.MouseLeave += new System.EventHandler(this.attackLeave);
             this.attack4.MouseHover += new System.EventHandler(this.attack4Hover);
             // 
@@ -241,6 +247,7 @@
             this.attack3.TabIndex = 16;
             this.attack3.Text = "Attack 3";
             this.attack3.UseVisualStyleBackColor = false;
+            this.attack3.Click += new System.EventHandler(this.attack3_Click);
             this.attack3.MouseLeave += new System.EventHandler(this.attackLeave);
             this.attack3.MouseHover += new System.EventHandler(this.attack3Hover);
             // 
@@ -259,6 +266,7 @@
             this.attack2.TabIndex = 14;
             this.attack2.Text = "Heavy Attack";
             this.attack2.UseVisualStyleBackColor = false;
+            this.attack2.Click += new System.EventHandler(this.attack2_Click);
             this.attack2.MouseLeave += new System.EventHandler(this.attackLeave);
             this.attack2.MouseHover += new System.EventHandler(this.attack2Hover);
             // 
@@ -370,7 +378,6 @@
             this.modifierPanel.Name = "modifierPanel";
             this.modifierPanel.Size = new System.Drawing.Size(280, 150);
             this.modifierPanel.TabIndex = 15;
-            this.modifierPanel.Visible = false;
             // 
             // modifierLabel
             // 
@@ -381,9 +388,43 @@
             this.modifierLabel.Location = new System.Drawing.Point(3, 9);
             this.modifierLabel.MaximumSize = new System.Drawing.Size(280, 150);
             this.modifierLabel.Name = "modifierLabel";
-            this.modifierLabel.Size = new System.Drawing.Size(93, 41);
+            this.modifierLabel.Size = new System.Drawing.Size(0, 41);
             this.modifierLabel.TabIndex = 0;
-            this.modifierLabel.Text = "Blyat";
+            // 
+            // actionPanel
+            // 
+            this.actionPanel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.actionPanel.BackColor = System.Drawing.Color.Black;
+            this.actionPanel.Controls.Add(this.action1Label);
+            this.actionPanel.Controls.Add(this.action2Label);
+            this.actionPanel.Location = new System.Drawing.Point(439, 413);
+            this.actionPanel.Name = "actionPanel";
+            this.actionPanel.Size = new System.Drawing.Size(441, 124);
+            this.actionPanel.TabIndex = 16;
+            this.actionPanel.Visible = false;
+            // 
+            // action1Label
+            // 
+            this.action1Label.AutoSize = true;
+            this.action1Label.BackColor = System.Drawing.Color.Transparent;
+            this.action1Label.Font = new System.Drawing.Font("Gigi", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.action1Label.ForeColor = System.Drawing.Color.Gold;
+            this.action1Label.Location = new System.Drawing.Point(9, 76);
+            this.action1Label.Name = "action1Label";
+            this.action1Label.Size = new System.Drawing.Size(0, 37);
+            this.action1Label.TabIndex = 10;
+            // 
+            // action2Label
+            // 
+            this.action2Label.AutoSize = true;
+            this.action2Label.BackColor = System.Drawing.Color.Transparent;
+            this.action2Label.Font = new System.Drawing.Font("Gigi", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.action2Label.ForeColor = System.Drawing.Color.Gray;
+            this.action2Label.Location = new System.Drawing.Point(9, 16);
+            this.action2Label.Name = "action2Label";
+            this.action2Label.Size = new System.Drawing.Size(110, 37);
+            this.action2Label.TabIndex = 9;
+            this.action2Label.Text = "Action2";
             // 
             // Battlescreen
             // 
@@ -392,6 +433,7 @@
             this.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Orc_Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1284, 731);
+            this.Controls.Add(this.actionPanel);
             this.Controls.Add(this.modifierPanel);
             this.Controls.Add(this.detailsPanel);
             this.Controls.Add(this.controlPanel);
@@ -418,6 +460,8 @@
             this.detailsPanel.PerformLayout();
             this.modifierPanel.ResumeLayout(false);
             this.modifierPanel.PerformLayout();
+            this.actionPanel.ResumeLayout(false);
+            this.actionPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -447,6 +491,9 @@
         private System.Windows.Forms.Label detailsLabel;
         private System.Windows.Forms.Panel modifierPanel;
         private System.Windows.Forms.Label modifierLabel;
+        private System.Windows.Forms.Panel actionPanel;
+        private System.Windows.Forms.Label action1Label;
+        private System.Windows.Forms.Label action2Label;
     }
 }
 
