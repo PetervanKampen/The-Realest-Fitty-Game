@@ -34,7 +34,6 @@
             this.Debug = new System.Windows.Forms.Button();
             this.Char2HP = new System.Windows.Forms.ProgressBar();
             this.Timer = new System.Windows.Forms.Label();
-            this.Turn = new System.Windows.Forms.Label();
             this.playerDamage = new System.Windows.Forms.Label();
             this.playerDefense = new System.Windows.Forms.Label();
             this.attackPanel = new System.Windows.Forms.Panel();
@@ -45,8 +44,11 @@
             this.attack1 = new System.Windows.Forms.Button();
             this.attackButton = new System.Windows.Forms.Button();
             this.statPanel = new System.Windows.Forms.Panel();
+            this.actionCountLabel = new System.Windows.Forms.Label();
             this.defendButton = new System.Windows.Forms.Button();
             this.controlPanel = new System.Windows.Forms.Panel();
+            this.turnIndicator = new System.Windows.Forms.Button();
+            this.endTurnButton = new System.Windows.Forms.Button();
             this.detailsPanel = new System.Windows.Forms.Panel();
             this.detailsLabel = new System.Windows.Forms.Label();
             this.modifierPanel = new System.Windows.Forms.Panel();
@@ -54,6 +56,9 @@
             this.actionPanel = new System.Windows.Forms.Panel();
             this.action1Label = new System.Windows.Forms.Label();
             this.action2Label = new System.Windows.Forms.Label();
+            this.enemyModPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.enemyModLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Char1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Char2)).BeginInit();
             this.attackPanel.SuspendLayout();
@@ -62,6 +67,7 @@
             this.detailsPanel.SuspendLayout();
             this.modifierPanel.SuspendLayout();
             this.actionPanel.SuspendLayout();
+            this.enemyModPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Char1
@@ -135,24 +141,11 @@
             this.Timer.BackColor = System.Drawing.Color.Transparent;
             this.Timer.Font = new System.Drawing.Font("Gigi", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Timer.ForeColor = System.Drawing.Color.Gold;
-            this.Timer.Location = new System.Drawing.Point(15, 13);
+            this.Timer.Location = new System.Drawing.Point(12, 0);
             this.Timer.Name = "Timer";
             this.Timer.Size = new System.Drawing.Size(113, 37);
             this.Timer.TabIndex = 5;
             this.Timer.Text = "00:00:000";
-            // 
-            // Turn
-            // 
-            this.Turn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Turn.AutoSize = true;
-            this.Turn.BackColor = System.Drawing.Color.Transparent;
-            this.Turn.Font = new System.Drawing.Font("Gigi", 46F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Turn.ForeColor = System.Drawing.Color.Gold;
-            this.Turn.Location = new System.Drawing.Point(31, 93);
-            this.Turn.Name = "Turn";
-            this.Turn.Size = new System.Drawing.Size(377, 85);
-            this.Turn.TabIndex = 6;
-            this.Turn.Text = "YOUR TURN";
             // 
             // playerDamage
             // 
@@ -160,7 +153,7 @@
             this.playerDamage.BackColor = System.Drawing.Color.Transparent;
             this.playerDamage.Font = new System.Drawing.Font("Gigi", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playerDamage.ForeColor = System.Drawing.Color.Gold;
-            this.playerDamage.Location = new System.Drawing.Point(12, 62);
+            this.playerDamage.Location = new System.Drawing.Point(12, 65);
             this.playerDamage.Name = "playerDamage";
             this.playerDamage.Size = new System.Drawing.Size(195, 37);
             this.playerDamage.TabIndex = 7;
@@ -172,7 +165,7 @@
             this.playerDefense.BackColor = System.Drawing.Color.Transparent;
             this.playerDefense.Font = new System.Drawing.Font("Gigi", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playerDefense.ForeColor = System.Drawing.Color.Gold;
-            this.playerDefense.Location = new System.Drawing.Point(12, 93);
+            this.playerDefense.Location = new System.Drawing.Point(12, 102);
             this.playerDefense.Name = "playerDefense";
             this.playerDefense.Size = new System.Drawing.Size(198, 37);
             this.playerDefense.TabIndex = 8;
@@ -201,7 +194,7 @@
             this.attack5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.attack5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.attack5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.attack5.Font = new System.Drawing.Font("Gigi", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.attack5.Font = new System.Drawing.Font("Gigi", 20F);
             this.attack5.ForeColor = System.Drawing.Color.Gold;
             this.attack5.Location = new System.Drawing.Point(780, 12);
             this.attack5.Name = "attack5";
@@ -220,7 +213,7 @@
             this.attack4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.attack4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.attack4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.attack4.Font = new System.Drawing.Font("Gigi", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.attack4.Font = new System.Drawing.Font("Gigi", 20F);
             this.attack4.ForeColor = System.Drawing.Color.Gold;
             this.attack4.Location = new System.Drawing.Point(588, 12);
             this.attack4.Name = "attack4";
@@ -239,7 +232,7 @@
             this.attack3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.attack3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.attack3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.attack3.Font = new System.Drawing.Font("Gigi", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.attack3.Font = new System.Drawing.Font("Gigi", 20F);
             this.attack3.ForeColor = System.Drawing.Color.Gold;
             this.attack3.Location = new System.Drawing.Point(396, 12);
             this.attack3.Name = "attack3";
@@ -309,6 +302,7 @@
             // statPanel
             // 
             this.statPanel.BackColor = System.Drawing.Color.Black;
+            this.statPanel.Controls.Add(this.actionCountLabel);
             this.statPanel.Controls.Add(this.Timer);
             this.statPanel.Controls.Add(this.playerDamage);
             this.statPanel.Controls.Add(this.playerDefense);
@@ -316,6 +310,18 @@
             this.statPanel.Name = "statPanel";
             this.statPanel.Size = new System.Drawing.Size(280, 139);
             this.statPanel.TabIndex = 11;
+            // 
+            // actionCountLabel
+            // 
+            this.actionCountLabel.AutoSize = true;
+            this.actionCountLabel.BackColor = System.Drawing.Color.Transparent;
+            this.actionCountLabel.Font = new System.Drawing.Font("Gigi", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.actionCountLabel.ForeColor = System.Drawing.Color.Gold;
+            this.actionCountLabel.Location = new System.Drawing.Point(15, 28);
+            this.actionCountLabel.Name = "actionCountLabel";
+            this.actionCountLabel.Size = new System.Drawing.Size(240, 37);
+            this.actionCountLabel.TabIndex = 9;
+            this.actionCountLabel.Text = "Actions Remaining:";
             // 
             // defendButton
             // 
@@ -338,22 +344,56 @@
             // 
             this.controlPanel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.controlPanel.BackColor = System.Drawing.Color.Black;
+            this.controlPanel.Controls.Add(this.turnIndicator);
+            this.controlPanel.Controls.Add(this.endTurnButton);
             this.controlPanel.Controls.Add(this.defendButton);
             this.controlPanel.Controls.Add(this.attackButton);
-            this.controlPanel.Controls.Add(this.Turn);
             this.controlPanel.Location = new System.Drawing.Point(439, 544);
             this.controlPanel.Name = "controlPanel";
             this.controlPanel.Size = new System.Drawing.Size(441, 190);
             this.controlPanel.TabIndex = 13;
+            // 
+            // turnIndicator
+            // 
+            this.turnIndicator.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.turnIndicator.BackColor = System.Drawing.Color.Transparent;
+            this.turnIndicator.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.turnIndicator.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.turnIndicator.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.turnIndicator.Font = new System.Drawing.Font("Gigi", 20F);
+            this.turnIndicator.ForeColor = System.Drawing.Color.Green;
+            this.turnIndicator.Location = new System.Drawing.Point(230, 109);
+            this.turnIndicator.Name = "turnIndicator";
+            this.turnIndicator.Size = new System.Drawing.Size(161, 66);
+            this.turnIndicator.TabIndex = 14;
+            this.turnIndicator.Text = "Your Turn";
+            this.turnIndicator.UseVisualStyleBackColor = false;
+            // 
+            // endTurnButton
+            // 
+            this.endTurnButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.endTurnButton.BackColor = System.Drawing.Color.Transparent;
+            this.endTurnButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.endTurnButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.endTurnButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.endTurnButton.Font = new System.Drawing.Font("Gigi", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.endTurnButton.ForeColor = System.Drawing.Color.Gold;
+            this.endTurnButton.Location = new System.Drawing.Point(46, 109);
+            this.endTurnButton.Name = "endTurnButton";
+            this.endTurnButton.Size = new System.Drawing.Size(161, 66);
+            this.endTurnButton.TabIndex = 13;
+            this.endTurnButton.Text = "End Turn";
+            this.endTurnButton.UseVisualStyleBackColor = false;
+            this.endTurnButton.Click += new System.EventHandler(this.endTurnButton_Click);
             // 
             // detailsPanel
             // 
             this.detailsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.detailsPanel.BackColor = System.Drawing.Color.Black;
             this.detailsPanel.Controls.Add(this.detailsLabel);
-            this.detailsPanel.Location = new System.Drawing.Point(992, 157);
+            this.detailsPanel.Location = new System.Drawing.Point(12, 12);
             this.detailsPanel.Name = "detailsPanel";
-            this.detailsPanel.Size = new System.Drawing.Size(280, 150);
+            this.detailsPanel.Size = new System.Drawing.Size(280, 139);
             this.detailsPanel.TabIndex = 14;
             this.detailsPanel.Visible = false;
             // 
@@ -361,12 +401,12 @@
             // 
             this.detailsLabel.AutoSize = true;
             this.detailsLabel.BackColor = System.Drawing.Color.Transparent;
-            this.detailsLabel.Font = new System.Drawing.Font("Gigi", 22F);
+            this.detailsLabel.Font = new System.Drawing.Font("Gigi", 18F);
             this.detailsLabel.ForeColor = System.Drawing.Color.Gold;
             this.detailsLabel.Location = new System.Drawing.Point(3, 9);
             this.detailsLabel.MaximumSize = new System.Drawing.Size(280, 150);
             this.detailsLabel.Name = "detailsLabel";
-            this.detailsLabel.Size = new System.Drawing.Size(93, 41);
+            this.detailsLabel.Size = new System.Drawing.Size(75, 33);
             this.detailsLabel.TabIndex = 0;
             this.detailsLabel.Text = "Blyat";
             // 
@@ -378,6 +418,7 @@
             this.modifierPanel.Name = "modifierPanel";
             this.modifierPanel.Size = new System.Drawing.Size(280, 150);
             this.modifierPanel.TabIndex = 15;
+            this.modifierPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.modifierPanel_Paint);
             // 
             // modifierLabel
             // 
@@ -426,6 +467,42 @@
             this.action2Label.TabIndex = 9;
             this.action2Label.Text = "Action2";
             // 
+            // enemyModPanel
+            // 
+            this.enemyModPanel.BackColor = System.Drawing.Color.Black;
+            this.enemyModPanel.Controls.Add(this.enemyModLabel);
+            this.enemyModPanel.Controls.Add(this.label1);
+            this.enemyModPanel.Location = new System.Drawing.Point(992, 157);
+            this.enemyModPanel.Name = "enemyModPanel";
+            this.enemyModPanel.Size = new System.Drawing.Size(280, 150);
+            this.enemyModPanel.TabIndex = 16;
+            this.enemyModPanel.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Gigi", 22F);
+            this.label1.ForeColor = System.Drawing.Color.Gold;
+            this.label1.Location = new System.Drawing.Point(3, 9);
+            this.label1.MaximumSize = new System.Drawing.Size(280, 150);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 41);
+            this.label1.TabIndex = 0;
+            // 
+            // enemyModLabel
+            // 
+            this.enemyModLabel.AutoSize = true;
+            this.enemyModLabel.BackColor = System.Drawing.Color.Transparent;
+            this.enemyModLabel.Font = new System.Drawing.Font("Gigi", 18F);
+            this.enemyModLabel.ForeColor = System.Drawing.Color.Gold;
+            this.enemyModLabel.Location = new System.Drawing.Point(9, 9);
+            this.enemyModLabel.MaximumSize = new System.Drawing.Size(280, 150);
+            this.enemyModLabel.Name = "enemyModLabel";
+            this.enemyModLabel.Size = new System.Drawing.Size(75, 33);
+            this.enemyModLabel.TabIndex = 1;
+            this.enemyModLabel.Text = "Blyat";
+            // 
             // Battlescreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -433,6 +510,7 @@
             this.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Orc_Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1284, 731);
+            this.Controls.Add(this.enemyModPanel);
             this.Controls.Add(this.actionPanel);
             this.Controls.Add(this.modifierPanel);
             this.Controls.Add(this.detailsPanel);
@@ -455,13 +533,14 @@
             this.statPanel.ResumeLayout(false);
             this.statPanel.PerformLayout();
             this.controlPanel.ResumeLayout(false);
-            this.controlPanel.PerformLayout();
             this.detailsPanel.ResumeLayout(false);
             this.detailsPanel.PerformLayout();
             this.modifierPanel.ResumeLayout(false);
             this.modifierPanel.PerformLayout();
             this.actionPanel.ResumeLayout(false);
             this.actionPanel.PerformLayout();
+            this.enemyModPanel.ResumeLayout(false);
+            this.enemyModPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -474,7 +553,6 @@
         private System.Windows.Forms.Button Debug;
         private System.Windows.Forms.ProgressBar Char2HP;
         private System.Windows.Forms.Label Timer;
-        private System.Windows.Forms.Label Turn;
         private System.Windows.Forms.Label playerDamage;
         private System.Windows.Forms.Label playerDefense;
         private System.Windows.Forms.Panel attackPanel;
@@ -494,6 +572,12 @@
         private System.Windows.Forms.Panel actionPanel;
         private System.Windows.Forms.Label action1Label;
         private System.Windows.Forms.Label action2Label;
+        private System.Windows.Forms.Label actionCountLabel;
+        private System.Windows.Forms.Button turnIndicator;
+        private System.Windows.Forms.Button endTurnButton;
+        private System.Windows.Forms.Panel enemyModPanel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label enemyModLabel;
     }
 }
 

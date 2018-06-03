@@ -49,7 +49,7 @@ namespace The_Realest_Fitty_Game
 
             Form menu = new Menu(data);
           
-            menu.Show();
+            menu.ShowDialog();
             this.Dispose();
         }
 

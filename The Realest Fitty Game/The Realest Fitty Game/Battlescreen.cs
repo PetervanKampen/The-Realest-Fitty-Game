@@ -71,6 +71,13 @@ namespace The_Realest_Fitty_Game
             this.Char1.Image = data.playerchar.sprite;
 
             this.modifierLabel.Text += ("- " + data.playerchar.getPassive());
+            this.attack3.Text = data.playerchar.getAttacks(0);
+            this.attack4.Text = data.playerchar.getAttacks(1);
+            this.attack5.Text = data.playerchar.getAttacks(2);
+
+            this.actionCountLabel.Text = "Actions Remaining: " + data.playerchar.getActions();
+            this.playerDamage.Text = "Attack Damage: " + data.playerchar.getAD();
+            this.playerDefense.Text = "Defense Rating: " + data.playerchar.getDefense();
 
             if (data.playerchar.getCharNum() == 4)
             {
@@ -82,9 +89,8 @@ namespace The_Realest_Fitty_Game
                 Char1.Location = new Point(70, 30);
             }
 
-            this.playerDamage.Text = "Attack Damage: "+ data.playerchar.getAD();
-            this.playerDefense.Text = "Defense Rating: " + data.playerchar.getDefense();
             Console.WriteLine("Debug2");
+
             switch (data.getCycle())
             {
                 case 0:
@@ -240,16 +246,20 @@ namespace The_Realest_Fitty_Game
             if (data.playerturn)
             {
                 this.attackPanel.Visible = false;
-                this.Turn.Text = "ENEMY TURN";
+                this.turnIndicator.ForeColor = System.Drawing.Color.Red;
+                this.turnIndicator.Text = "Enemy Turn";
                 this.attackButton.ForeColor = System.Drawing.Color.Gray;
                 this.defendButton.ForeColor = System.Drawing.Color.Gray;
+                this.endTurnButton.ForeColor = System.Drawing.Color.Gray;
                 data.playerturn = false;
             }
             else
             {
-                this.Turn.Text = "YOUR TURN";
+                this.turnIndicator.Text = "Your Turn";
+                this.turnIndicator.ForeColor = System.Drawing.Color.Green;
                 this.attackButton.ForeColor = System.Drawing.Color.Gold;
                 this.defendButton.ForeColor = System.Drawing.Color.Gold;
+                this.endTurnButton.ForeColor = System.Drawing.Color.Gold;
                 data.playerturn = true;
             }
         }
@@ -295,9 +305,8 @@ namespace The_Realest_Fitty_Game
 
         private void attack3_Click(object sender, EventArgs e)
         {
-            this.actionPanel.Visible = true;
-            this.action2Label.Text = this.action1Label.Text;
-            this.action1Label.Text = data.playerchar.getName() + " used " + this.attack3.Text;
+            this.actionPanel.Visible = true;     
+            specAttack1();
         }
 
         private void attack4_Click(object sender, EventArgs e)
@@ -312,6 +321,27 @@ namespace The_Realest_Fitty_Game
             this.actionPanel.Visible = true;
             this.action2Label.Text = this.action1Label.Text;
             this.action1Label.Text = data.playerchar.getName() + " used " + this.attack5.Text;
+        }
+
+        private void endTurnButton_Click(object sender, EventArgs e)
+        {
+            this.actionPanel.Visible = false;
+            turnSwap();
+        }
+
+        private void modifierPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void specAttack1()
+        {
+            if (data.playerchar.getAttackUses(0) > 0)
+            {
+                data.playerchar.modAttackUses(0, -1);
+                this.action2Label.Text = this.action1Label.Text;
+                this.action1Label.Text = data.playerchar.getName() + " used " + this.attack3.Text;
+            }
         }
     }
 }
