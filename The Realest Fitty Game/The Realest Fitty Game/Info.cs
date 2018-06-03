@@ -71,13 +71,60 @@ namespace The_Realest_Fitty_Game
                     answer = "A hard hitting but slow attack. \n Uses Remaining: ∞";
                     break;
                 case "Attack 3":
-                    answer = "Attack 3";
+                    if (playerchar.getCharNum() == 1) //Gandalf
+                    {
+                        answer = "Silence the Enemy. \n Uses Remaining: " + playerchar.getAttackUses(0);
+                    }
+                    else if (playerchar.getCharNum() == 2) //Aragorn
+                    {
+                        answer = "Attack with bow and arrow. \n Uses Remaining: " + playerchar.getAttackUses(0);
+                    }
+                    else if (playerchar.getCharNum() == 3) //Legolas
+                    {
+                        answer = "Strike with precision for extra damage. \n Uses Remaining: " + playerchar.getAttackUses(0);
+                    }
+                    else if (playerchar.getCharNum() == 4) //Gimli
+                    {
+                        answer = "Stun the Enemy with your Charge. \n Uses Remaining: " + playerchar.getAttackUses(0);
+                    }
                     break;
                 case "Attack 4":
-                    answer = "Attack 4";
+
+                    if (playerchar.getCharNum() == 1) //Gandalf
+                    {
+                        answer = "Blast the Enemy with Magic. \n Uses Remaining: " + playerchar.getAttackUses(1);
+                    }
+                    else if (playerchar.getCharNum() == 2) //Aragorn
+                    {
+                        answer = "Increase chance of decapitation. \n Uses Remaining: " + playerchar.getAttackUses(1);
+                    }
+                    else if (playerchar.getCharNum() == 3) //Legolas
+                    {
+                        answer = "Shoot two arrows at once. \n Uses Remaining: " + playerchar.getAttackUses(1);
+                    }
+                    else if (playerchar.getCharNum() == 4) //Gimli
+                    {
+                        answer = "Permanently reduce enemy's defence. \n Uses Remaining: " + playerchar.getAttackUses(1);
+                    }
                     break;
+
                 case "Attack 5":
-                    answer = "Attack 5";
+                    if (playerchar.getCharNum() == 1) //Gandalf
+                    {
+                        answer = "Heal your sustained Wounds. \n Uses Remaining: " + playerchar.getAttackUses(2);
+                    }
+                    else if (playerchar.getCharNum() == 2) //Aragorn
+                    {
+                        answer = "Chance to instantly kill enemy. \n Uses Remaining: " + playerchar.getAttackUses(2);
+                    }
+                    else if (playerchar.getCharNum() == 3) //Legolas
+                    {
+                        answer = "Strike enemy with your two knives. \n Uses Remaining: " + playerchar.getAttackUses(2);
+                    }
+                    else if (playerchar.getCharNum() == 4) //Gimli
+                    {
+                        answer = "Swap between your weapons. \n Uses Remaining: " + playerchar.getAttackUses(2);
+                    }
                     break;
             }
             return answer;

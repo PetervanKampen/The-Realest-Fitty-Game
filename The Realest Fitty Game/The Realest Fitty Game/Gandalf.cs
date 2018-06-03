@@ -19,6 +19,8 @@ namespace The_Realest_Fitty_Game
             defense = 8;
             passive = "Spell Flux";
             desription = "Spell Flux: Regain Spell Uses after each succesful fight.";
+            attacks = new String[] { "Silencing Voice", "Wizard Blast", "Healing Whispers" };
+            attackUses = new int[] { 2, 2, 2 };
             sprite = global::The_Realest_Fitty_Game.Properties.Resources.Gandalf;
             portrait = global::The_Realest_Fitty_Game.Properties.Resources.Gandalf_Portrait;
         }
