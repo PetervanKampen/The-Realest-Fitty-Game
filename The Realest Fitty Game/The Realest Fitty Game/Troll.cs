@@ -14,6 +14,8 @@ namespace The_Realest_Fitty_Game
             Charnum = 2;
             enemy = true;
             hp = 150;
+            defense = 12;
+            rangedAttacks = false;
             sprite = global::The_Realest_Fitty_Game.Properties.Resources.Troll;
         }
     }

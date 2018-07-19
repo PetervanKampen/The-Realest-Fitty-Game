@@ -1,0 +1,13 @@
+C:\Users\peter\Documents\School\GitHub\Kraken\The-Realest-Fitty-Game\The Realest Fitty Game\The Realest Fitty Game\bin\Release\The Realest Fitty Game.exe.config
+C:\Users\peter\Documents\School\GitHub\Kraken\The-Realest-Fitty-Game\The Realest Fitty Game\The Realest Fitty Game\bin\Release\The Realest Fitty Game.exe
+C:\Users\peter\Documents\School\GitHub\Kraken\The-Realest-Fitty-Game\The Realest Fitty Game\The Realest Fitty Game\bin\Release\The Realest Fitty Game.pdb
+C:\Users\peter\Documents\School\GitHub\Kraken\The-Realest-Fitty-Game\The Realest Fitty Game\The Realest Fitty Game\obj\Release\The Realest Fitty Game.csprojResolveAssemblyReference.cache
+C:\Users\peter\Documents\School\GitHub\Kraken\The-Realest-Fitty-Game\The Realest Fitty Game\The Realest Fitty Game\obj\Release\The_Realest_Fitty_Game.Battlescreen.resources
+C:\Users\peter\Documents\School\GitHub\Kraken\The-Realest-Fitty-Game\The Realest Fitty Game\The Realest Fitty Game\obj\Release\The_Realest_Fitty_Game.Endscreen.resources
+C:\Users\peter\Documents\School\GitHub\Kraken\The-Realest-Fitty-Game\The Realest Fitty Game\The Realest Fitty Game\obj\Release\The_Realest_Fitty_Game.Menu.resources
+C:\Users\peter\Documents\School\GitHub\Kraken\The-Realest-Fitty-Game\The Realest Fitty Game\The Realest Fitty Game\obj\Release\The_Realest_Fitty_Game.Select.resources
+C:\Users\peter\Documents\School\GitHub\Kraken\The-Realest-Fitty-Game\The Realest Fitty Game\The Realest Fitty Game\obj\Release\The_Realest_Fitty_Game.Properties.Resources.resources
+C:\Users\peter\Documents\School\GitHub\Kraken\The-Realest-Fitty-Game\The Realest Fitty Game\The Realest Fitty Game\obj\Release\The_Realest_Fitty_Game.Settings.resources
+C:\Users\peter\Documents\School\GitHub\Kraken\The-Realest-Fitty-Game\The Realest Fitty Game\The Realest Fitty Game\obj\Release\The Realest Fitty Game.csproj.GenerateResource.Cache
+C:\Users\peter\Documents\School\GitHub\Kraken\The-Realest-Fitty-Game\The Realest Fitty Game\The Realest Fitty Game\obj\Release\The Realest Fitty Game.exe
+C:\Users\peter\Documents\School\GitHub\Kraken\The-Realest-Fitty-Game\The Realest Fitty Game\The Realest Fitty Game\obj\Release\The Realest Fitty Game.pdb

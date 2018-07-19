@@ -14,7 +14,7 @@ namespace The_Realest_Fitty_Game
     public partial class Battlescreen : Form
     {
         private Info data;
-        delegate void SetTimeCallback(string text);
+        private Random Rand = new Random();
 
         public Battlescreen(Info data_, bool firstTime)
         {
@@ -69,6 +69,8 @@ namespace The_Realest_Fitty_Game
             Console.WriteLine("Debug");
 
             this.Char1.Image = data.playerchar.sprite;
+
+            
 
             this.modifierLabel.Text += ("- " + data.playerchar.getPassive());
             this.attack3.Text = data.playerchar.getAttacks(0);
@@ -126,7 +128,14 @@ namespace The_Realest_Fitty_Game
             
             this.Char2HP.Maximum = data.enemychar.getHP();
             this.Char2HP.Value = data.enemychar.getHP();
+
+            updateMods();
             Console.WriteLine("Debug4");
+
+            /////////////////////////////
+            data.playerchar.modHP(30);
+            updateHP();
+            /////////////////////////////
 
         }
 
@@ -212,31 +221,8 @@ namespace The_Realest_Fitty_Game
             if (!enemy)
             {
                 double diffWidth = (image.Width - newWidth);
-                //double diffHeight = (image.Height - newHeight);
-
                 image.Location = new Point((image.Location.X), (image.Location.Y - (int)diffWidth));
             }
-            /*  else if (enemy)
-              {
-                  double diffWidth = 0;
-                  double diffHeight = 0;
-                  if (widthfactor > 1 || heightfactor > 1)
-                  {
-                      diffWidth = Math.Abs(image.Width - newWidth);
-                      diffHeight = Math.Abs(image.Height - newHeight);
-
-                      image.Location = new Point((image.Location.X - (int)diffHeight), (image.Location.Y - (int)diffWidth));
-                  }
-                  else
-                  {
-                      diffWidth = (image.Width - newWidth);
-                      diffHeight = (image.Height - newHeight);
-
-                      image.Location = new Point((image.Location.X + (int)diffHeight), (image.Location.Y + (int)diffWidth));
-                  }
-
-              }
-  */
             image.Width = (int)newWidth;
             image.Height = (int)newHeight;
         }
@@ -252,9 +238,25 @@ namespace The_Realest_Fitty_Game
                 this.defendButton.ForeColor = System.Drawing.Color.Gray;
                 this.endTurnButton.ForeColor = System.Drawing.Color.Gray;
                 data.playerturn = false;
+                if((data.turnCount - data.enemychar.getSilencedTurn()) >= 1)
+                {
+                    data.enemychar.setSilenced(false);
+                    updateEnemyMods();
+                }
+                if ((data.turnCount - data.enemychar.getStunnedTurn()) >= 1)
+                {
+                    data.enemychar.setStunned(false);
+                    updateEnemyMods();
+                }
+                if ((data.turnCount - data.enemychar.getPinnedTurn()) >= 2)
+                {
+                    data.enemychar.setPinned(false);
+                    updateEnemyMods();
+                }
             }
             else
             {
+                data.turnCount += 1;
                 this.turnIndicator.Text = "Your Turn";
                 this.turnIndicator.ForeColor = System.Drawing.Color.Green;
                 this.attackButton.ForeColor = System.Drawing.Color.Gold;
@@ -294,6 +296,24 @@ namespace The_Realest_Fitty_Game
             this.actionPanel.Visible = true;
             this.action2Label.Text = this.action1Label.Text;
             this.action1Label.Text = data.playerchar.getName() + " used " + this.attack1.Text;
+            if (!data.playerchar.getStunned())
+            {
+                data.enemychar.modHP(damageMit((int)(data.playerchar.getAD() * 1), true));
+            }
+            else
+            {
+                this.action2Label.Text = this.action1Label.Text;
+                this.action1Label.Text = data.playerchar.getName() + " is stunned.";
+            }
+            updateHP();
+            if(data.playerchar.getRangedAttacks())
+            {
+                data.playerchar.setRanged(true);
+            }
+            else
+            {
+                data.playerchar.setRanged(false);
+            }
         }
 
         private void attack2_Click(object sender, EventArgs e)
@@ -301,6 +321,24 @@ namespace The_Realest_Fitty_Game
             this.actionPanel.Visible = true;
             this.action2Label.Text = this.action1Label.Text;
             this.action1Label.Text = data.playerchar.getName() + " used " + this.attack2.Text;
+            if (!data.playerchar.getStunned())
+            {
+                data.enemychar.modHP(damageMit((int)(data.playerchar.getAD() * 1.5), true));
+            }
+            else
+            {
+                this.action2Label.Text = this.action1Label.Text;
+                this.action1Label.Text = data.playerchar.getName() + " is stunned.";
+            }
+            updateHP();
+            if (data.playerchar.getRangedAttacks())
+            {
+                data.playerchar.setRanged(true);
+            }
+            else
+            {
+                data.playerchar.setRanged(false);
+            }
         }
 
         private void attack3_Click(object sender, EventArgs e)
@@ -312,15 +350,13 @@ namespace The_Realest_Fitty_Game
         private void attack4_Click(object sender, EventArgs e)
         {
             this.actionPanel.Visible = true;
-            this.action2Label.Text = this.action1Label.Text;
-            this.action1Label.Text = data.playerchar.getName() + " used " + this.attack4.Text;
+            specAttack2();
         }
 
         private void attack5_Click(object sender, EventArgs e)
         {
             this.actionPanel.Visible = true;
-            this.action2Label.Text = this.action1Label.Text;
-            this.action1Label.Text = data.playerchar.getName() + " used " + this.attack5.Text;
+            specAttack3();
         }
 
         private void endTurnButton_Click(object sender, EventArgs e)
@@ -334,13 +370,366 @@ namespace The_Realest_Fitty_Game
 
         }
 
+        private void updateHP()
+        {
+            if (data.playerchar.getHP() >= 0)
+            {
+                this.Char1HP.Value = data.playerchar.getHP();
+            }
+            if (data.enemychar.getHP() >= 0)
+            {
+                this.Char2HP.Value = data.enemychar.getHP();
+            }
+        }
+
+        private void updateMods()
+        {
+            String text = (data.playerchar.getPassive() + " \n");
+            if (data.playerchar.getCloven())
+            {
+                text += " - Cloven Defense \n";
+            }
+            if (data.playerchar.getRanged())
+            {
+                text += " - Ranged \n";
+            }
+            if (data.playerchar.getSilenced())
+            {
+                text += " - Silenced \n";
+            }
+            if (data.playerchar.getStunned())
+            {
+                text += " - Stunned \n";
+            }
+            if (data.playerchar.getPinned())
+            {
+                text += " - Pinned \n";
+            }
+
+            if (text != null)
+            {
+                modifierPanel.Visible = true;
+                modifierLabel.Text = text;
+            }
+
+        }
+
+        private void updateEnemyMods()
+        {
+            String text = null;
+            if (data.enemychar.getCloven())
+            {
+                text += " - Cloven Defense \n";
+            }
+            if (data.enemychar.getRanged())
+            {
+                text += " - Ranged \n";
+            }
+            if (data.enemychar.getSilenced())
+            {
+                text += " - Silenced \n";
+            }
+            if(data.enemychar.getStunned())
+            {
+                text += " - Stunned \n";
+            }
+            if (data.enemychar.getPinned())
+            {
+                text += " - Pinned \n";
+            }
+
+            if (text != null)
+            {
+                enemyModPanel.Visible = true;
+                enemyModLabel.Text = text;
+            }
+            else
+            {
+                enemyModPanel.Visible = false;
+            }
+        }
+
+        private bool chanceRanged()
+        {
+            int chance = Rand.Next(0, 10);
+            if(chance <= 6)
+            {
+                Console.WriteLine(" ranged true");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine(" ranged false");
+                return false;
+            }
+        }
+
+        private int damageMit(int damage, bool targetenemy)
+        {
+            if (targetenemy)
+            {
+                return (int)(damage / data.enemychar.getDefense() * 10);
+            }
+            else
+            {
+                return (int)(damage / data.playerchar.getDefense() * 10);
+            }
+        }
+
         private void specAttack1()
         {
             if (data.playerchar.getAttackUses(0) > 0)
             {
-                data.playerchar.modAttackUses(0, -1);
-                this.action2Label.Text = this.action1Label.Text;
-                this.action1Label.Text = data.playerchar.getName() + " used " + this.attack3.Text;
+                if (!data.playerchar.getSilenced() && !data.playerchar.getStunned())
+                {
+                    data.playerchar.modAttackUses(0, -1);
+                    this.action2Label.Text = this.action1Label.Text;
+                    this.action1Label.Text = data.playerchar.getName() + " used " + this.attack3.Text;
+
+                    if (data.playerchar.getCharNum() == 1) //Gandalf
+                    {
+                        data.enemychar.setSilenced(true);
+                        data.enemychar.setSilencedTurn(data.turnCount);
+                        data.playerchar.setRanged(true);
+                        updateMods();
+                        updateEnemyMods();
+                        updateHP();
+                    }
+
+                    else if (data.playerchar.getCharNum() == 2) //Aragorn
+                    {
+                        if(data.enemychar.getRanged())
+                        {
+                            if(chanceRanged())
+                            {
+                                data.enemychar.modHP(damageMit(data.playerchar.getAD(), true));
+                            }
+                            else
+                            {
+                                this.action2Label.Text = this.action1Label.Text;
+                                this.action1Label.Text = data.playerchar.getName() + " missed.";
+                            }
+                        }
+                        else
+                        {
+                            data.enemychar.modHP(damageMit(data.playerchar.getAD(), true));
+                        }                       
+                        data.playerchar.setRanged(true);
+                        updateMods();
+                        updateEnemyMods();
+                        updateHP();
+                    }
+
+                    else if (data.playerchar.getCharNum() == 3) //Legolas
+                    {
+                        data.enemychar.modHP(damageMit(((int)(data.playerchar.getAD() * 1.7)), true));
+                        updateHP();
+                        data.playerchar.setRanged(true);
+                        updateMods();
+                        updateEnemyMods();
+                        updateHP();
+                    }
+
+                    else if (data.playerchar.getCharNum() == 4) //Gimli
+                    {
+                        data.enemychar.setStunned(true);
+                        data.enemychar.setStunnedTurn(data.turnCount);
+                        data.playerchar.setRanged(false);
+                        updateMods();
+                        updateEnemyMods();
+                        updateHP();
+                    }
+                }
+                else if(data.playerchar.getSilenced())
+                {
+                    this.action2Label.Text = this.action1Label.Text;
+                    this.action1Label.Text = data.playerchar.getName() + " is silenced.";
+                }
+                else if (data.playerchar.getStunned())
+                {
+                    this.action2Label.Text = this.action1Label.Text;
+                    this.action1Label.Text = data.playerchar.getName() + " is stunned.";
+                }
+            }
+        }
+
+        private void specAttack2()
+        {
+            if (data.playerchar.getAttackUses(1) > 0)
+            {
+                if (!data.playerchar.getSilenced() && !data.playerchar.getStunned())
+                {
+                    data.playerchar.modAttackUses(1, -1);
+                    this.action2Label.Text = this.action1Label.Text;
+                    this.action1Label.Text = data.playerchar.getName() + " used " + this.attack4.Text;
+
+                    if (data.playerchar.getCharNum() == 1) //Gandalf
+                    {
+                        if (data.enemychar.getRanged())
+                        {
+                            if (chanceRanged())
+                            {
+                                data.enemychar.modHP(damageMit((int)(data.playerchar.getAD() * 1.8), true));
+                                data.enemychar.setRanged(true);
+                            }
+                            else
+                            {
+                                this.action2Label.Text = this.action1Label.Text;
+                                this.action1Label.Text = data.playerchar.getName() + " missed.";
+                            }
+                        }
+                        else
+                        {
+                            data.enemychar.modHP(damageMit((int)(data.playerchar.getAD() * 1.8), true));
+                            data.enemychar.setRanged(true);
+                        }
+                        data.playerchar.setRanged(true);
+                        updateMods();
+                        updateEnemyMods();
+                        updateHP();
+                    }
+
+                    else if (data.playerchar.getCharNum() == 2) //Aragorn
+                    {
+                        if (data.enemychar.getRanged())
+                        {
+                            if (chanceRanged())
+                            {
+                                data.enemychar.setPinned(true);
+                                data.enemychar.setPinnedTurn(data.turnCount);
+                                data.enemychar.modHP(damageMit((int)(data.playerchar.getAD() * 1), true));
+                            }
+                            else
+                            {
+                                this.action2Label.Text = this.action1Label.Text;
+                                this.action1Label.Text = data.playerchar.getName() + " missed.";
+                            }
+                        }
+                        else
+                        {
+                            data.enemychar.setPinned(true);
+                            data.enemychar.setPinnedTurn(data.turnCount);
+                            data.enemychar.modHP(damageMit((int)(data.playerchar.getAD() * 1), true));
+                        }
+                        data.playerchar.setRanged(false);
+                        updateMods();
+                        updateEnemyMods();
+                        updateHP();
+                    }
+
+                    else if (data.playerchar.getCharNum() == 3) //Legolas
+                    {
+                        if (data.enemychar.getRanged())
+                        {
+                            if (chanceRanged())
+                            {
+                                data.enemychar.modHP(damageMit((int)(data.playerchar.getAD() * 2.2), true));
+                            }
+                            else
+                            {
+                                this.action2Label.Text = this.action1Label.Text;
+                                this.action1Label.Text = data.playerchar.getName() + " missed.";
+                            }
+                        }
+                        else
+                        {
+                            data.enemychar.modHP(damageMit((int)(data.playerchar.getAD() * 2.2), true));
+                        }
+                        data.playerchar.setRanged(true);
+                        updateMods();
+                        updateEnemyMods();
+                        updateHP();
+                    }
+
+                    else if (data.playerchar.getCharNum() == 4) //Gimli
+                    {
+                        if (data.enemychar.getRanged())
+                        {
+                            if (chanceRanged())
+                            {
+                                data.enemychar.setCloven(true);
+                                data.enemychar.modDefense(-4);
+                                data.enemychar.modHP(damageMit((int)(data.playerchar.getAD() * 1), true));
+                            }
+                            else
+                            {
+                                this.action2Label.Text = this.action1Label.Text;
+                                this.action1Label.Text = data.playerchar.getName() + " missed.";
+                            }
+                        }
+                        else
+                        {
+                            data.enemychar.setCloven(true);
+                            data.enemychar.modDefense(-4);
+                            data.enemychar.modHP(damageMit((int)(data.playerchar.getAD() * 1), true));
+                        }
+                        data.playerchar.setRanged(false);
+                        updateMods();
+                        updateEnemyMods();
+                        updateHP();
+                    }
+                }
+                else if (data.playerchar.getSilenced())
+                {
+                    this.action2Label.Text = this.action1Label.Text;
+                    this.action1Label.Text = data.playerchar.getName() + " is silenced.";
+                }
+                else if (data.playerchar.getStunned())
+                {
+                    this.action2Label.Text = this.action1Label.Text;
+                    this.action1Label.Text = data.playerchar.getName() + " is stunned.";
+                }
+            }
+        }
+
+        private void specAttack3()
+        {
+            if (data.playerchar.getAttackUses(2) > 0)
+            {
+                if (!data.playerchar.getSilenced() && !data.playerchar.getStunned())
+                {
+                    data.playerchar.modAttackUses(2, -1);
+                    this.action2Label.Text = this.action1Label.Text;
+                    this.action1Label.Text = data.playerchar.getName() + " used " + this.attack5.Text;
+
+                    if (data.playerchar.getCharNum() == 1) //Gandalf
+                    {
+                        data.playerchar.modHP(-25);
+                        
+                        if(data.playerchar.getHP() > data.playerchar.getMaxHP())
+                        {
+                            data.playerchar.setHP(data.playerchar.getMaxHP());
+                        }
+                        
+                        updateHP();
+                    }
+
+                    else if (data.playerchar.getCharNum() == 2) //Aragorn
+                    {
+                       
+                    }
+
+                    else if (data.playerchar.getCharNum() == 3) //Legolas
+                    {
+                        
+                    }
+
+                    else if (data.playerchar.getCharNum() == 4) //Gimli
+                    {
+
+                    }
+                        
+                }
+                else if (data.playerchar.getSilenced())
+                {
+                    this.action2Label.Text = this.action1Label.Text;
+                    this.action1Label.Text = data.playerchar.getName() + " is silenced.";
+                }
+                else if (data.playerchar.getStunned())
+                {
+                    this.action2Label.Text = this.action1Label.Text;
+                    this.action1Label.Text = data.playerchar.getName() + " is stunned.";
+                }
             }
         }
     }

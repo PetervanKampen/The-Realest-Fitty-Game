@@ -57,8 +57,8 @@
             this.action1Label = new System.Windows.Forms.Label();
             this.action2Label = new System.Windows.Forms.Label();
             this.enemyModPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.enemyModLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Char1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Char2)).BeginInit();
             this.attackPanel.SuspendLayout();
@@ -469,6 +469,7 @@
             // 
             // enemyModPanel
             // 
+            this.enemyModPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.enemyModPanel.BackColor = System.Drawing.Color.Black;
             this.enemyModPanel.Controls.Add(this.enemyModLabel);
             this.enemyModPanel.Controls.Add(this.label1);
@@ -477,18 +478,6 @@
             this.enemyModPanel.Size = new System.Drawing.Size(280, 150);
             this.enemyModPanel.TabIndex = 16;
             this.enemyModPanel.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Gigi", 22F);
-            this.label1.ForeColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(3, 9);
-            this.label1.MaximumSize = new System.Drawing.Size(280, 150);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 41);
-            this.label1.TabIndex = 0;
             // 
             // enemyModLabel
             // 
@@ -502,6 +491,18 @@
             this.enemyModLabel.Size = new System.Drawing.Size(75, 33);
             this.enemyModLabel.TabIndex = 1;
             this.enemyModLabel.Text = "Blyat";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Gigi", 22F);
+            this.label1.ForeColor = System.Drawing.Color.Gold;
+            this.label1.Location = new System.Drawing.Point(3, 9);
+            this.label1.MaximumSize = new System.Drawing.Size(280, 150);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 41);
+            this.label1.TabIndex = 0;
             // 
             // Battlescreen
             // 

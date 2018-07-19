@@ -19,6 +19,7 @@ namespace The_Realest_Fitty_Game
         private int BossCycle;
         public Stopwatch timer = new Stopwatch();
         public long GameStartTime;
+        public int turnCount = 1;
 
         public Info()
         {

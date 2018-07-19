@@ -14,6 +14,9 @@ namespace The_Realest_Fitty_Game
             Charnum = 0;
             enemy = true;
             hp = 50;
+            maxHP = 50;
+            defense = 7;
+            rangedAttacks = false;
             sprite = global::The_Realest_Fitty_Game.Properties.Resources.Orc;
         }
     }

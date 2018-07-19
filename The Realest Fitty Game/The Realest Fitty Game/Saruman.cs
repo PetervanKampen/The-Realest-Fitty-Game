@@ -15,6 +15,9 @@ namespace The_Realest_Fitty_Game
             Charnum = 3;
             enemy = true;
             hp = 100;
+            maxHP = 100;
+            defense = 11;
+            rangedAttacks = true;
             sprite = global::The_Realest_Fitty_Game.Properties.Resources.Saruman;
 
         }

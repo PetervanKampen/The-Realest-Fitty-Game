@@ -78,6 +78,7 @@
             // 
             // Gandalf_Button
             // 
+            this.Gandalf_Button.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Gandalf_Button.BackColor = System.Drawing.Color.Transparent;
             this.Gandalf_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Gandalf_Button.FlatAppearance.BorderSize = 0;
@@ -86,9 +87,9 @@
             this.Gandalf_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Gandalf_Button.Font = new System.Drawing.Font("Gigi", 46F);
             this.Gandalf_Button.ForeColor = System.Drawing.Color.Gold;
-            this.Gandalf_Button.Location = new System.Drawing.Point(23, 205);
+            this.Gandalf_Button.Location = new System.Drawing.Point(55, 95);
             this.Gandalf_Button.Name = "Gandalf_Button";
-            this.Gandalf_Button.Size = new System.Drawing.Size(303, 170);
+            this.Gandalf_Button.Size = new System.Drawing.Size(292, 157);
             this.Gandalf_Button.TabIndex = 6;
             this.Gandalf_Button.Text = "Gandalf";
             this.Gandalf_Button.UseVisualStyleBackColor = false;
@@ -96,7 +97,7 @@
             // 
             // Aragorn_Button
             // 
-            this.Aragorn_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Aragorn_Button.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Aragorn_Button.BackColor = System.Drawing.Color.Transparent;
             this.Aragorn_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Aragorn_Button.FlatAppearance.BorderSize = 0;
@@ -105,9 +106,9 @@
             this.Aragorn_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Aragorn_Button.Font = new System.Drawing.Font("Gigi", 46F);
             this.Aragorn_Button.ForeColor = System.Drawing.Color.Gold;
-            this.Aragorn_Button.Location = new System.Drawing.Point(23, 381);
+            this.Aragorn_Button.Location = new System.Drawing.Point(55, 227);
             this.Aragorn_Button.Name = "Aragorn_Button";
-            this.Aragorn_Button.Size = new System.Drawing.Size(303, 170);
+            this.Aragorn_Button.Size = new System.Drawing.Size(292, 128);
             this.Aragorn_Button.TabIndex = 7;
             this.Aragorn_Button.Text = "Aragorn";
             this.Aragorn_Button.UseVisualStyleBackColor = false;
@@ -115,7 +116,7 @@
             // 
             // Legolas_Button
             // 
-            this.Legolas_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Legolas_Button.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Legolas_Button.BackColor = System.Drawing.Color.Transparent;
             this.Legolas_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Legolas_Button.FlatAppearance.BorderSize = 0;
@@ -124,9 +125,9 @@
             this.Legolas_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Legolas_Button.Font = new System.Drawing.Font("Gigi", 46F);
             this.Legolas_Button.ForeColor = System.Drawing.Color.Gold;
-            this.Legolas_Button.Location = new System.Drawing.Point(969, 205);
+            this.Legolas_Button.Location = new System.Drawing.Point(55, 361);
             this.Legolas_Button.Name = "Legolas_Button";
-            this.Legolas_Button.Size = new System.Drawing.Size(303, 170);
+            this.Legolas_Button.Size = new System.Drawing.Size(292, 157);
             this.Legolas_Button.TabIndex = 8;
             this.Legolas_Button.Text = "Legolas";
             this.Legolas_Button.UseVisualStyleBackColor = false;
@@ -134,7 +135,7 @@
             // 
             // Gimli_Button
             // 
-            this.Gimli_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Gimli_Button.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Gimli_Button.BackColor = System.Drawing.Color.Transparent;
             this.Gimli_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Gimli_Button.FlatAppearance.BorderSize = 0;
@@ -143,9 +144,9 @@
             this.Gimli_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Gimli_Button.Font = new System.Drawing.Font("Gigi", 46F);
             this.Gimli_Button.ForeColor = System.Drawing.Color.Gold;
-            this.Gimli_Button.Location = new System.Drawing.Point(969, 381);
+            this.Gimli_Button.Location = new System.Drawing.Point(55, 508);
             this.Gimli_Button.Name = "Gimli_Button";
-            this.Gimli_Button.Size = new System.Drawing.Size(303, 170);
+            this.Gimli_Button.Size = new System.Drawing.Size(292, 167);
             this.Gimli_Button.TabIndex = 9;
             this.Gimli_Button.Text = "Gimli";
             this.Gimli_Button.UseVisualStyleBackColor = false;
