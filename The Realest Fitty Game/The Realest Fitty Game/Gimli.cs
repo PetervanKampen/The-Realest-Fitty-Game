@@ -20,9 +20,10 @@ namespace The_Realest_Fitty_Game
             defense = 15;
             passive = " - Dwarven Sturdiness";
             desription = "Dwarven Sturdiness: Regain portion of lost HP at the start of each turn.";
-            attacks = new String[] { "Dwarven Charge", "Cleaving Strike", "Change Stance" };
+            attacks = new String[] { "Dwarven Charge", "Cleaving Strike", "Change Weapon" };
             attackUses = new int[] { 2, 2, 99 };
             rangedAttacks = false;
+            weaponSwapped = false;
             sprite = global::The_Realest_Fitty_Game.Properties.Resources.Gimli;
             portrait = global::The_Realest_Fitty_Game.Properties.Resources.Gimli_Portrait;
         }

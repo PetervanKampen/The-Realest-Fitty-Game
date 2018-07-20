@@ -29,6 +29,7 @@ namespace The_Realest_Fitty_Game
         protected int pinnedTurn;
         protected bool clovenDefense;
         protected bool ranged;
+        protected bool weaponSwapped;
         public System.Drawing.Image sprite;
         public System.Drawing.Image portrait;
 
@@ -54,6 +55,7 @@ namespace The_Realest_Fitty_Game
         public int getAD() { return AD; }
 
         public void setActions(int actions_) { actions = actions_; }
+        public void reduceAction() { actions--; }
         public int getActions() { return actions; }
 
         public void setDefense(int defense_) { defense = defense_; }
@@ -91,6 +93,9 @@ namespace The_Realest_Fitty_Game
 
         public void setRanged(bool ranged_) { ranged = ranged_; }
         public bool getRanged() { return ranged; }
+
+        public void setSwapped(bool swapped_) { weaponSwapped = swapped_; }
+        public bool getSwapped() { return weaponSwapped; }
 
         public String getAttacks(int index)
         {
