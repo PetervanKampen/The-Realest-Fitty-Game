@@ -15,6 +15,7 @@ namespace The_Realest_Fitty_Game
     {
         private Info data;
         private Random Rand = new Random();
+        private bool wonGame;
 
         public Battlescreen(Info data_, bool firstTime)
         {
@@ -129,7 +130,19 @@ namespace The_Realest_Fitty_Game
             this.Char2HP.Maximum = data.enemychar.getHP();
             this.Char2HP.Value = data.enemychar.getHP();
 
-            updateMods();
+
+
+            if(data.playerchar.getCharNum() == 2) //aragorn passive reset
+            {
+                data.playerchar.setAD(10);
+            }
+
+            if(data.playerchar.getCharNum() == 3)
+            {
+                data.playerchar.legolasPassive();
+            }
+
+            updateLabels();
             Console.WriteLine("Debug4");
         }
 
@@ -175,15 +188,16 @@ namespace The_Realest_Fitty_Game
             this.WindowState = FormWindowState.Maximized;
         }
 
-        protected override void OnFormClosing(FormClosingEventArgs e)
+     /*   protected override void OnFormClosing(FormClosingEventArgs e)
         {
             
-         //   System.Windows.Forms.Application.Exit();
-        }
+            System.Windows.Forms.Application.Exit();
+        }*/
 
         private void Debug_Click(object sender, EventArgs e)
         {
-            turnSwap();
+            System.Windows.Forms.Application.Exit();
+            /*turnSwap();
             if (this.Char1HP.Value > 0 && this.Char2HP.Value > 0)
             {
                 this.Char1HP.Value -= 10;
@@ -203,8 +217,7 @@ namespace The_Realest_Fitty_Game
                     end.ShowDialog();
                 }
 
-                this.Dispose();
-            }
+                this.Dispose();*/       
         }
 
         public void RescaleImage(PictureBox image, double widthfactor, double heightfactor, bool enemy)
@@ -227,40 +240,54 @@ namespace The_Realest_Fitty_Game
             {
                 this.attackPanel.Visible = false;
                 data.enemychar.setActions(2);
-                updateLabels();
+                
                 this.turnIndicator.ForeColor = System.Drawing.Color.Red;
                 this.turnIndicator.Text = "Enemy Turn";
                 this.attackButton.ForeColor = System.Drawing.Color.Gray;
                 this.defendButton.ForeColor = System.Drawing.Color.Gray;
                 this.endTurnButton.ForeColor = System.Drawing.Color.Gray;
                 data.playerturn = false;
-                if((data.turnCount - data.enemychar.getSilencedTurn()) >= 1)
+                if ((data.turnCount - data.enemychar.getSilencedTurn()) >= 1)
                 {
                     data.enemychar.setSilenced(false);
-                    updateEnemyMods();
                 }
                 if ((data.turnCount - data.enemychar.getStunnedTurn()) >= 1)
                 {
                     data.enemychar.setStunned(false);
-                    updateEnemyMods();
                 }
                 if ((data.turnCount - data.enemychar.getPinnedTurn()) >= 2)
                 {
                     data.enemychar.setPinned(false);
-                    updateEnemyMods();
-                }
+                }               
+                updateLabels();
             }
             else
             {
                 data.turnCount += 1;
                 data.playerchar.setActions(2);
-                updateLabels();
+
                 this.turnIndicator.Text = "Your Turn";
                 this.turnIndicator.ForeColor = System.Drawing.Color.Green;
                 this.attackButton.ForeColor = System.Drawing.Color.Gold;
                 this.defendButton.ForeColor = System.Drawing.Color.Gold;
                 this.endTurnButton.ForeColor = System.Drawing.Color.Gold;
                 data.playerturn = true;
+                if (data.playerchar.getCharNum() == 2)
+                {
+                    data.playerchar.aragornPassive();
+                }
+                if (data.playerchar.getCharNum() == 4)
+                {
+                    int missingHP = (data.playerchar.getMaxHP() - data.playerchar.getHP());
+                    int healing = 0 - ((int)(0.25 * missingHP));
+                    data.playerchar.modHP(healing);
+                }
+                if ((data.turnCount - data.enemychar.getDefendingTurn()) >= 1)
+                {
+                    data.playerchar.setDefending(false);
+                    data.playerchar.modDefense(-6);
+                }
+                updateLabels();
             }
         }
 
@@ -286,7 +313,16 @@ namespace The_Realest_Fitty_Game
 
         private void defendButton_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.Application.Exit();
+            // System.Windows.Forms.Application.Exit();
+            data.playerchar.reduceAction();
+            data.playerchar.setDefending(true);
+            data.playerchar.setDefendingTurn(data.turnCount);
+            data.playerchar.modDefense(6);
+            data.playerchar.setRanged(true);
+            this.actionPanel.Visible = true;
+            this.action2Label.Text = this.action1Label.Text;
+            this.action1Label.Text = data.playerchar.getName() + " entered a defensive stance.";
+            updateLabels();
         }
 
         private void attack1_Click(object sender, EventArgs e)
@@ -348,7 +384,7 @@ namespace The_Realest_Fitty_Game
                         data.enemychar.modHP(damageMit((int)(data.playerchar.getAD() * 1.5), true));
 
                         this.action2Label.Text = this.action1Label.Text;
-                        this.action1Label.Text = data.playerchar.getName() + " used " + this.attack1.Text;
+                        this.action1Label.Text = data.playerchar.getName() + " used " + this.attack2.Text;
                     }
                 }
                 updateLabels();
@@ -400,6 +436,28 @@ namespace The_Realest_Fitty_Game
 
         }
 
+        private void endGame(bool win)
+        {
+            if (win)
+            {
+                this.endTextLabel.Text = "You won the Fight";
+                this.endGameButton.Text = "To the next Fight";
+                this.endGamePanel.Visible = true;
+                wonGame = true;
+                if(data.playerchar.getCharNum() == 1)
+                {
+                    data.playerchar.gandalfPassive(3, 2, 2);
+                }
+            }
+            else
+            {
+                this.endTextLabel.Text = "Game Over";
+                this.endGameButton.Text = "To the Endscreen";
+                this.endGamePanel.Visible = true;
+                wonGame = false;
+            }
+        }
+
         private void updateLabels()
         {
             updateStats();
@@ -421,9 +479,19 @@ namespace The_Realest_Fitty_Game
             {
                 this.Char1HP.Value = data.playerchar.getHP();
             }
+            else
+            {
+                this.Char2HP.Value = 0;
+                endGame(false);
+            }
             if (data.enemychar.getHP() >= 0)
             {
                 this.Char2HP.Value = data.enemychar.getHP();
+            }
+            else
+            {
+                this.Char2HP.Value = 0;
+                endGame(true);
             }
         }
 
@@ -433,6 +501,10 @@ namespace The_Realest_Fitty_Game
             if (data.playerchar.getCloven())
             {
                 text += " - Cloven Defense \n";
+            }
+            if (data.playerchar.getDefending())
+            {
+                text += " - Defending \n";
             }
             if (data.playerchar.getRanged())
             {
@@ -465,6 +537,10 @@ namespace The_Realest_Fitty_Game
             if (data.enemychar.getCloven())
             {
                 text += " - Cloven Defense \n";
+            }
+            if (data.enemychar.getDefending())
+            {
+                text += " - Defending \n";
             }
             if (data.enemychar.getRanged())
             {
@@ -790,6 +866,38 @@ namespace The_Realest_Fitty_Game
                     this.action1Label.Text = data.playerchar.getName() + " is stunned.";
                 }
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void endGameButton_Click(object sender, EventArgs e)
+        {
+            if(wonGame)
+            {
+                if (data.enemychar.getCharNum() != 4)
+                {
+                    data.addCycle();
+                    data.playerchar.setActions(2);
+                    Form battle = new Battlescreen(data, false);
+                    battle.ShowDialog();
+                }
+                else
+                {
+                    Form end = new Endscreen(data, true);
+                    end.ShowDialog();
+                }
+
+                this.Dispose();
+            }
+            else
+            {
+                Form end = new Endscreen(data, false);
+                end.ShowDialog();
+            }
+
         }
     }
 }

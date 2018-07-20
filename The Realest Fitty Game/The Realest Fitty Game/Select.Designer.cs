@@ -87,7 +87,7 @@
             this.Gandalf_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Gandalf_Button.Font = new System.Drawing.Font("Gigi", 46F);
             this.Gandalf_Button.ForeColor = System.Drawing.Color.Gold;
-            this.Gandalf_Button.Location = new System.Drawing.Point(55, 95);
+            this.Gandalf_Button.Location = new System.Drawing.Point(55, 113);
             this.Gandalf_Button.Name = "Gandalf_Button";
             this.Gandalf_Button.Size = new System.Drawing.Size(292, 157);
             this.Gandalf_Button.TabIndex = 6;
@@ -106,7 +106,7 @@
             this.Aragorn_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Aragorn_Button.Font = new System.Drawing.Font("Gigi", 46F);
             this.Aragorn_Button.ForeColor = System.Drawing.Color.Gold;
-            this.Aragorn_Button.Location = new System.Drawing.Point(55, 227);
+            this.Aragorn_Button.Location = new System.Drawing.Point(55, 276);
             this.Aragorn_Button.Name = "Aragorn_Button";
             this.Aragorn_Button.Size = new System.Drawing.Size(292, 128);
             this.Aragorn_Button.TabIndex = 7;
@@ -125,7 +125,7 @@
             this.Legolas_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Legolas_Button.Font = new System.Drawing.Font("Gigi", 46F);
             this.Legolas_Button.ForeColor = System.Drawing.Color.Gold;
-            this.Legolas_Button.Location = new System.Drawing.Point(55, 361);
+            this.Legolas_Button.Location = new System.Drawing.Point(55, 410);
             this.Legolas_Button.Name = "Legolas_Button";
             this.Legolas_Button.Size = new System.Drawing.Size(292, 157);
             this.Legolas_Button.TabIndex = 8;
@@ -144,7 +144,7 @@
             this.Gimli_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Gimli_Button.Font = new System.Drawing.Font("Gigi", 46F);
             this.Gimli_Button.ForeColor = System.Drawing.Color.Gold;
-            this.Gimli_Button.Location = new System.Drawing.Point(55, 508);
+            this.Gimli_Button.Location = new System.Drawing.Point(55, 564);
             this.Gimli_Button.Name = "Gimli_Button";
             this.Gimli_Button.Size = new System.Drawing.Size(292, 167);
             this.Gimli_Button.TabIndex = 9;

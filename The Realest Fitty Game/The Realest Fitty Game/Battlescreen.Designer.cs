@@ -59,6 +59,9 @@
             this.enemyModPanel = new System.Windows.Forms.Panel();
             this.enemyModLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.endGamePanel = new System.Windows.Forms.Panel();
+            this.endTextLabel = new System.Windows.Forms.Label();
+            this.endGameButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Char1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Char2)).BeginInit();
             this.attackPanel.SuspendLayout();
@@ -68,6 +71,7 @@
             this.modifierPanel.SuspendLayout();
             this.actionPanel.SuspendLayout();
             this.enemyModPanel.SuspendLayout();
+            this.endGamePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Char1
@@ -111,7 +115,7 @@
             // 
             // Debug
             // 
-            this.Debug.Location = new System.Drawing.Point(613, 179);
+            this.Debug.Location = new System.Drawing.Point(325, 166);
             this.Debug.Name = "Debug";
             this.Debug.Size = new System.Drawing.Size(75, 23);
             this.Debug.TabIndex = 3;
@@ -504,6 +508,52 @@
             this.label1.Size = new System.Drawing.Size(0, 41);
             this.label1.TabIndex = 0;
             // 
+            // endGamePanel
+            // 
+            this.endGamePanel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.endGamePanel.BackColor = System.Drawing.Color.Black;
+            this.endGamePanel.Controls.Add(this.endGameButton);
+            this.endGamePanel.Controls.Add(this.endTextLabel);
+            this.endGamePanel.Location = new System.Drawing.Point(439, 170);
+            this.endGamePanel.MaximumSize = new System.Drawing.Size(440, 227);
+            this.endGamePanel.Name = "endGamePanel";
+            this.endGamePanel.Size = new System.Drawing.Size(440, 227);
+            this.endGamePanel.TabIndex = 17;
+            this.endGamePanel.Visible = false;
+            this.endGamePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // endTextLabel
+            // 
+            this.endTextLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.endTextLabel.AutoSize = true;
+            this.endTextLabel.BackColor = System.Drawing.Color.Transparent;
+            this.endTextLabel.Font = new System.Drawing.Font("Gigi", 38F);
+            this.endTextLabel.ForeColor = System.Drawing.Color.Gold;
+            this.endTextLabel.Location = new System.Drawing.Point(4, 13);
+            this.endTextLabel.MaximumSize = new System.Drawing.Size(450, 150);
+            this.endTextLabel.Name = "endTextLabel";
+            this.endTextLabel.Size = new System.Drawing.Size(418, 70);
+            this.endTextLabel.TabIndex = 1;
+            this.endTextLabel.Text = "You won the Fight";
+            // 
+            // endGameButton
+            // 
+            this.endGameButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.endGameButton.BackColor = System.Drawing.Color.Transparent;
+            this.endGameButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.endGameButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.endGameButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.endGameButton.Font = new System.Drawing.Font("Gigi", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.endGameButton.ForeColor = System.Drawing.Color.Gold;
+            this.endGameButton.Location = new System.Drawing.Point(72, 102);
+            this.endGameButton.Name = "endGameButton";
+            this.endGameButton.Size = new System.Drawing.Size(301, 107);
+            this.endGameButton.TabIndex = 15;
+            this.endGameButton.Text = "To the next Fight!";
+            this.endGameButton.UseVisualStyleBackColor = false;
+            this.endGameButton.Click += new System.EventHandler(this.endGameButton_Click);
+            // 
             // Battlescreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -511,6 +561,8 @@
             this.BackgroundImage = global::The_Realest_Fitty_Game.Properties.Resources.Orc_Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1284, 731);
+            this.Controls.Add(this.Debug);
+            this.Controls.Add(this.endGamePanel);
             this.Controls.Add(this.enemyModPanel);
             this.Controls.Add(this.actionPanel);
             this.Controls.Add(this.modifierPanel);
@@ -519,7 +571,6 @@
             this.Controls.Add(this.statPanel);
             this.Controls.Add(this.attackPanel);
             this.Controls.Add(this.Char2HP);
-            this.Controls.Add(this.Debug);
             this.Controls.Add(this.Char1HP);
             this.Controls.Add(this.Char2);
             this.Controls.Add(this.Char1);
@@ -542,6 +593,8 @@
             this.actionPanel.PerformLayout();
             this.enemyModPanel.ResumeLayout(false);
             this.enemyModPanel.PerformLayout();
+            this.endGamePanel.ResumeLayout(false);
+            this.endGamePanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -579,6 +632,9 @@
         private System.Windows.Forms.Panel enemyModPanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label enemyModLabel;
+        private System.Windows.Forms.Panel endGamePanel;
+        private System.Windows.Forms.Label endTextLabel;
+        private System.Windows.Forms.Button endGameButton;
     }
 }
 

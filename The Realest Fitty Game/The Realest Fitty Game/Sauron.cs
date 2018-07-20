@@ -14,8 +14,8 @@ namespace The_Realest_Fitty_Game
             Name = "Sauron";
             Charnum = 4;
             enemy = true;
-            hp = 200;
-            maxHP = 200;
+            hp = 160;
+            maxHP = 160;
             defense = 18;
             rangedAttacks = false;
             sprite = global::The_Realest_Fitty_Game.Properties.Resources.Sauron;

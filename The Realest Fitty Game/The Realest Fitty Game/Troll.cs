@@ -13,7 +13,8 @@ namespace The_Realest_Fitty_Game
             Name = "Troll";
             Charnum = 2;
             enemy = true;
-            hp = 150;
+            hp = 120;
+            maxHP = 120;
             defense = 12;
             rangedAttacks = false;
             sprite = global::The_Realest_Fitty_Game.Properties.Resources.Troll;

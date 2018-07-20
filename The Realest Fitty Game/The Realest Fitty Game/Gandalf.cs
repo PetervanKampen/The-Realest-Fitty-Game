@@ -19,7 +19,7 @@ namespace The_Realest_Fitty_Game
             AD = 12;
             defense = 10;
             passive = " - Spell Flux";
-            desription = "Spell Flux: Regain Spell Uses after each succesful fight.";
+            desription = "Spell Flux: Gain Spell Uses after each succesful fight.";
             attacks = new String[] { "Silencing Voice", "Wizard Blast", "Healing Whispers" };
             attackUses = new int[] { 2, 2, 2 };
             rangedAttacks = false;

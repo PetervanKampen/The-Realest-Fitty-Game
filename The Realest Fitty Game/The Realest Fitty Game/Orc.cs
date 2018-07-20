@@ -15,7 +15,7 @@ namespace The_Realest_Fitty_Game
             enemy = true;
             hp = 50;
             maxHP = 50;
-            defense = 7;
+            defense = 8;
             rangedAttacks = false;
             sprite = global::The_Realest_Fitty_Game.Properties.Resources.Orc;
         }

@@ -30,6 +30,8 @@ namespace The_Realest_Fitty_Game
         protected bool clovenDefense;
         protected bool ranged;
         protected bool weaponSwapped;
+        protected bool defending;
+        protected int defendingTurn;
         public System.Drawing.Image sprite;
         public System.Drawing.Image portrait;
 
@@ -97,6 +99,12 @@ namespace The_Realest_Fitty_Game
         public void setSwapped(bool swapped_) { weaponSwapped = swapped_; }
         public bool getSwapped() { return weaponSwapped; }
 
+        public void setDefending(bool defending_) { defending = defending_; }
+        public bool getDefending() { return defending; }
+
+        public void setDefendingTurn(int defendingTurn_) { defendingTurn = defendingTurn_; }
+        public int getDefendingTurn() { return defendingTurn; }
+
         public String getAttacks(int index)
         {
             try
@@ -131,6 +139,21 @@ namespace The_Realest_Fitty_Game
                 return 404;
             }
         }
+        public void gandalfPassive(int amount1, int amount2, int amount3)
+        {
+            attackUses[0] += amount1;
+            attackUses[1] += amount2;
+            attackUses[2] += amount3;
+        }
 
+        public void aragornPassive()
+        {
+            AD++;
+        }
+
+        public void legolasPassive()
+        {
+            actions = 4;
+        }
     }
 }
